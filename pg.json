@@ -787,22 +787,47 @@
 {"q":"¿Cómo se llama el protagonista de Payday?","a":"Dallas"},
 {"q":"¿Qué juego trata de atracos en equipo?","a":"Payday"},
 {"q":"¿Cómo se llama el protagonista de Hitman?","a":"Agente 47"},
-{"q":"¿Qué juego trata de asesinatos sigilosos?","a":"Hitman"},
+{"q":"¿Qué juego trata de asesinatos sigilosos?","a":"Hitman"}
 
     
 ],
-  "adivina": [
-    "Preservativo", 
-    "Tinder", 
-    "Resaca", 
-    "Suegra", 
-    "Orgía", 
-    "Borrachera", 
-    "Divorcio", 
-    "Erección", 
-    "Chupito", 
-    "Amante"
-  ],
+
+
+
+
+"adivina": [
+"Infidelidad","Ligoteo","Crush","Cita","Flechazo","Celos","Amante","Besos","Tensión","Cama",
+"Resaca","Pedo","Chupito","Botellón","Discoteca","After","Fiesta","Caos","Desfase","Bebida",
+"Vergüenza","Ridículo","Fail","Caída","Excusa","Mentira","Drama","Problema","Lío","Bronca",
+"Multa","Policía","Cárcel","Robo","Estafa","Engaño","Pelea","Huida","Delito","Testigo",
+"Sudor","Olor","Ducha","Perfume","Desodorante","Sucio","Limpio","Baño","Espejo","Toalla",
+"Selfie","Filtro","Postureo","Influencer","Viral","TikTok","Like","Seguidores","Directo","Story",
+"Spam","Hackeo","Contraseña","Pantalla","Mensaje","Audio","Llamada","Bloqueado","Stalkear","Captura",
+"NPC","Boss","Nivel","Bug","Glitch","Victoria","Derrota","Rage","Tryhard","Noob",
+"Anime","Waifu","Senpai","Otaku","Cosplay","Poder","Magia","Transformación","Villano","Batalla",
+"Alien","Ovni","Fantasma","Demonio","Espíritu","Paranormal","Maldición","Pesadilla","Sombra","Oscuridad",
+"Caliente","Frío","Temblor","Fuego","Explosión","Tormenta","Rayo","Viento","Caos","Ruido",
+"Silencio","Susurro","Grito","Risa","Llanto","Enfado","Locura","Ansiedad","Nervios","Sorpresa",
+"Rico","Pobre","Dinero","Deuda","Apuesta","Casino","Premio","Suerte","Azar","Pérdida",
+"Trabajo","Despido","Jefe","Reunión","Oficina","Horario","Vacaciones","Viaje","Hotel","Avión",
+"Playa","Montaña","Ciudad","Calle","Noche","Día","Luces","Fiesta","Bar","Pub",
+"Comida","Hambre","Antojo","Pizza","Hamburguesa","Picante","Dulce","Salado","Bebida","Café",
+"Sexo","Morbo","Deseo","Fantasía","Atracción","Tensión","Mirada","Indirecta","Coqueteo","Provocar",
+"Reto","Castigo","Juego","Turno","Regla","Equipo","Competición","Victoria","Perder","Empate",
+"Locura","Descontrol","Improvisar","Error","Accidente","Sorpresa","Cambio","Decisión","Destino","Suerte",
+
+"Tabú","Prohibido","Secreto","Oculto","Censura","Regla","Restricción","Pista","Adivinar","Palabra",
+"Pista","Señal","Clave","Descripción","Silencio","Tiempo","Turno","Equipo","Ronda","Victoria"
+],
+  
+
+
+
+
+
+
+
+  
   "votos": [
     "¿Quién es más probable que acabe en la cárcel?",
     "¿Quién es el más pervertido?",
@@ -810,27 +835,70 @@
     "¿Quién es el más tacaño?",
     "¿Quién llora más por su ex?"
   ],
+
+
+
+
+
+
+
+
+
+  
   "cadenas": [
     "Marcas de condones", 
     "Posturas", 
     "Bebidas blancas", 
     "Sitios raros para hacerlo"
   ],
+
+
+
+
+
+
+
+  
   "risa": [
     "Imita un orgasmo", 
     "Canta el himno llorando", 
     "Baila como un pollo"
   ],
+
+
+
+
+
+
+
+  
   "senalado": [
     "Bebe el más bajo", 
     "Bebe si tienes tatuajes", 
     "Bebe el que tenga más batería"
   ],
+
+
+
+
+
+
+
+
+  
   "todos": [
     "Cascada!", 
     "Último en tocar el suelo bebe", 
     "Todos los hombres beben"
   ],
+
+
+
+
+
+
+
+  
   "nunca": {
     "suave": [
       "Yo nunca me he caído en público",
@@ -845,6 +913,13 @@
       "Yo nunca lo he hecho en un lugar público"
     ]
   },
+
+
+
+
+
+
+  
   "ruleta": [
     "Bebe 1", 
     "Manda 2", 
