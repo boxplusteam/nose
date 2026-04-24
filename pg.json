@@ -1695,19 +1695,311 @@
 
   
   "nunca": {
-    "suave": [
-      "Yo nunca me he caído en público",
-      "Yo nunca he mentido en mi edad",
-      
-    ],
-    "picante": [
-      "Yo nunca he enviado un nude",
-      "Yo nunca me he enrollado con el ex de un amigo"
-    ],
-    "salvaje": [
-      "Yo nunca he hecho un trío",
-      "Yo nunca lo he hecho en un lugar público"
-    ]
+  "suave": [
+"Yo nunca he llegado tarde a una cita",
+"Yo nunca me he dormido en clase",
+"Yo nunca he olvidado un cumpleaños",
+"Yo nunca he enviado un mensaje al chat equivocado",
+"Yo nunca he fingido escuchar a alguien",
+
+"Yo nunca he perdido algo importante",
+"Yo nunca he dicho 'ya voy' sin salir de casa",
+"Yo nunca he hecho trampa en un juego",
+"Yo nunca he copiado en un examen",
+"Yo nunca he mentido para evitar un plan",
+
+"Yo nunca he stalkeado a alguien en redes",
+"Yo nunca he borrado un mensaje después de enviarlo",
+"Yo nunca he fingido reírme de un chiste malo",
+"Yo nunca he tenido vergüenza por algo que hice",
+"Yo nunca he hecho el ridículo en público",
+
+"Yo nunca he olvidado lo que iba a decir",
+"Yo nunca he cantado solo como si fuera un concierto",
+"Yo nunca he bailado solo en casa",
+"Yo nunca he hablado conmigo mismo",
+"Yo nunca he tenido un día muy torpe",
+
+"Yo nunca he salido sin ganas pero luego me lo pasé bien",
+"Yo nunca he dicho 'solo una más' y no cumplirlo",
+"Yo nunca he tenido pereza extrema",
+"Yo nunca he mirado el móvil sin motivo",
+"Yo nunca he pasado horas en redes sin darme cuenta",
+
+"Yo nunca he tenido sueño todo el día",
+"Yo nunca he puesto una excusa para no salir",
+"Yo nunca me he quedado despierto hasta muy tarde",
+"Yo nunca he dicho algo sin pensar",
+"Yo nunca me he arrepentido de algo que dije",
+
+
+"Yo nunca he tropezado en la calle",
+"Yo nunca he saludado a alguien que no era",
+"Yo nunca he dicho 'gracias' sin motivo",
+"Yo nunca he fingido entender algo",
+"Yo nunca he buscado mi nombre en Google",
+
+"Yo nunca he abierto la nevera sin saber qué quería",
+"Yo nunca he repetido comida por gula",
+"Yo nunca he comido algo que se me cayó al suelo",
+"Yo nunca he intentado recordar un sueño sin éxito",
+"Yo nunca he mirado la hora y olvidado qué hora era",
+
+"Yo nunca he enviado un audio largo innecesario",
+"Yo nunca he dejado en visto a alguien",
+"Yo nunca he borrado un mensaje para que no lo lean",
+"Yo nunca he revisado notificaciones sin tener ninguna",
+"Yo nunca he usado el móvil sin darme cuenta del tiempo",
+
+"Yo nunca he cantado una canción mal",
+"Yo nunca he confundido la letra de una canción",
+"Yo nunca he tenido una canción pegada todo el día",
+"Yo nunca he bailado sin saber bailar",
+"Yo nunca he hecho el tonto con música",
+
+"Yo nunca he salido de casa y vuelto por algo olvidado",
+"Yo nunca he perdido las llaves",
+"Yo nunca he buscado algo que tenía en la mano",
+"Yo nunca he dicho '¿qué?' sin escuchar",
+"Yo nunca he fingido estar ocupado",
+
+"Yo nunca he mirado a alguien y me ha pillado",
+"Yo nunca he reído en un momento serio",
+"Yo nunca he tenido un momento incómodo sin saber qué hacer",
+"Yo nunca he dicho algo y arrepentirme al instante",
+"Yo nunca he repetido una historia sin darme cuenta"
+ 
+],
+   "picante": [
+"Yo nunca he enviado un mensaje subido de tono",
+"Yo nunca he besado a alguien en una fiesta",
+"Yo nunca he tenido un crush secreto",
+"Yo nunca he ligado por redes sociales",
+"Yo nunca he coqueteado por aburrimiento",
+
+"Yo nunca he besado a alguien y arrepentirme después",
+"Yo nunca he tenido dos personas que me gustaran a la vez",
+"Yo nunca he mentido sobre con quién estaba",
+"Yo nunca he revisado el perfil de alguien demasiadas veces",
+"Yo nunca he tonteado con alguien prohibido",
+
+"Yo nunca he tenido una cita incómoda",
+"Yo nunca he besado a alguien mayor que yo",
+"Yo nunca he besado a alguien menor que yo",
+"Yo nunca he hablado con alguien solo por su físico",
+"Yo nunca he dado mi número a alguien",
+
+"Yo nunca he borrado mensajes para que no los vean",
+"Yo nunca he sentido celos sin ser nada",
+"Yo nunca he vuelto a hablar con un ex",
+"Yo nunca he ocultado que alguien me gustaba",
+"Yo nunca he tenido una relación secreta",
+
+"Yo nunca he flirteado estando en una relación",
+"Yo nunca he usado una excusa para ver a alguien",
+"Yo nunca he fantaseado con alguien del grupo",
+"Yo nunca he dado un beso inesperado",
+"Yo nunca he recibido una indirecta y hacerme el loco",
+
+"Yo nunca he tenido vergüenza después de ligar",
+"Yo nunca he hecho match con alguien conocido",
+"Yo nunca he hablado con varias personas a la vez",
+"Yo nunca he tenido química instantánea con alguien",
+"Yo nunca he acabado pillado por alguien inesperado",
+
+
+"Yo nunca he besado a alguien que acababa de conocer",
+"Yo nunca he tenido una cita solo por interés",
+"Yo nunca he ignorado a alguien que me gustaba para hacerme el interesante",
+"Yo nunca he sentido tensión con alguien del grupo",
+"Yo nunca he pensado en alguien de aquí de otra forma",
+
+"Yo nunca he tenido una conversación subida de tono",
+"Yo nunca he ocultado con quién estaba hablando",
+"Yo nunca he dejado a alguien en visto a propósito",
+"Yo nunca he provocado celos a alguien",
+"Yo nunca he jugado con los sentimientos de alguien",
+
+"Yo nunca he tenido una cita que acabó muy mal",
+"Yo nunca he besado a alguien en un sitio público",
+"Yo nunca he dicho algo atrevido sin pensar",
+"Yo nunca he enviado indirectas claras",
+"Yo nunca he tenido un momento incómodo ligando",
+
+"Yo nunca he hablado con alguien solo por aburrimiento",
+"Yo nunca he fingido interés por alguien",
+"Yo nunca he tenido una situación rara con un amigo/a",
+"Yo nunca he estado a punto de liar algo y no hacerlo",
+"Yo nunca he sentido que alguien quería algo conmigo",
+
+"Yo nunca he cambiado mi actitud por alguien que me gusta",
+"Yo nunca he tenido una conversación que se me fue de las manos",
+"Yo nunca he pensado 'esto no debería estar pasando'",
+"Yo nunca he seguido el rollo sin querer realmente",
+"Yo nunca he hecho algo solo por el momento",
+
+"Yo nunca he tenido una historia que prefiero no contar",
+"Yo nunca he hablado mal de alguien con quien luego he ligado",
+"Yo nunca he tenido un momento de tensión muy evidente",
+"Yo nunca he evitado a alguien después de algo raro",
+"Yo nunca me he arrepentido justo después de un momento así",
+
+
+"Yo nunca he tenido un pensamiento subido de tono en mal momento",
+"Yo nunca he mirado a alguien más de la cuenta",
+"Yo nunca he sentido tensión sin decir nada",
+"Yo nunca he jugado a provocar sin que se note",
+"Yo nunca he tenido una mirada que lo decía todo",
+
+"Yo nunca he pensado en alguien en un momento inesperado",
+"Yo nunca he tenido química rara con alguien",
+"Yo nunca he sentido que algo podía pasar y no pasó",
+"Yo nunca he tenido una conversación con doble sentido",
+"Yo nunca he seguido una broma demasiado lejos",
+
+"Yo nunca he tenido una situación incómoda con tensión",
+"Yo nunca he pensado 'me estoy metiendo en lío'",
+"Yo nunca he tenido un momento de silencio incómodo con alguien",
+"Yo nunca he sentido que alguien me miraba diferente",
+"Yo nunca he dudado en hacer algo y luego arrepentirme",
+
+"Yo nunca he tenido curiosidad por alguien que no debía",
+"Yo nunca he tenido una situación que casi se descontrola",
+"Yo nunca he hecho algo sin pensar por el momento",
+"Yo nunca he tenido una historia que prefiero no contar",
+"Yo nunca he sentido que algo iba demasiado lejos",
+
+"Yo nunca he tenido una conexión rara con alguien",
+"Yo nunca he evitado a alguien después de algo incómodo",
+"Yo nunca he tenido una situación que se me quedó en la cabeza",
+"Yo nunca he sentido que alguien quería algo conmigo y no reaccioné",
+"Yo nunca he tenido un momento que parecía de película",
+
+"Yo nunca he pensado 'esto mejor no lo digo'",
+"Yo nunca he tenido una situación que me dio vergüenza después",
+"Yo nunca he seguido el rollo sin saber cómo acabaría",
+"Yo nunca he tenido un momento de tensión fuerte",
+"Yo nunca he sentido que algo iba a pasar en cualquier momento"
+
+     
+     
+], 
+
+ "salvaje": [
+"Yo nunca he tenido una historia que casi nadie sabe",
+"Yo nunca he hecho algo impulsivo de lo que luego me arrepentí",
+"Yo nunca he tenido una noche que terminó siendo un caos",
+"Yo nunca he mentido para escapar de una situación incómoda",
+"Yo nunca he tenido una experiencia muy vergonzosa",
+
+"Yo nunca he vuelto a hablar con alguien que juré olvidar",
+"Yo nunca he hecho algo arriesgado por emoción",
+"Yo nunca he tenido una situación demasiado intensa",
+"Yo nunca he ocultado una historia para evitar preguntas",
+"Yo nunca he acabado metido en un drama ajeno",
+
+"Yo nunca he tomado una decisión muy mala en el momento",
+"Yo nunca he hecho algo que pensé que no haría jamás",
+"Yo nunca he tenido una noche imposible de explicar",
+"Yo nunca he dicho 'no pasa nada' cuando sí pasaba",
+"Yo nunca he tenido una anécdota que da vergüenza contar",
+
+"Yo nunca he repetido un error sabiendo que era error",
+"Yo nunca he acabado en un sitio inesperado de madrugada",
+"Yo nunca he hecho algo solo por adrenalina",
+"Yo nunca he tenido una situación que casi se sale de control",
+"Yo nunca he pensado al día siguiente 'qué hice ayer'",
+
+"Yo nunca he tenido una historia que parece inventada",
+"Yo nunca he hecho algo que aún me persigue mentalmente",
+"Yo nunca he callado una verdad por miedo al caos",
+"Yo nunca he tenido una noche legendaria para mal",
+"Yo nunca he sido mala influencia para alguien",
+
+"Yo nunca he seguido una idea terrible hasta el final",
+"Yo nunca he hecho algo que no repetiría jamás",
+"Yo nunca he estado en medio de un escándalo",
+"Yo nunca he provocado problemas sin querer",
+"Yo nunca he salido ileso de una locura por pura suerte",
+
+
+
+"Yo nunca he hecho algo que me daría mucha vergüenza que se supiera aquí",
+"Yo nunca he tenido una noche que prefiero olvidar completamente",
+"Yo nunca he mentido para tapar algo importante",
+"Yo nunca he hecho algo sabiendo que estaba mal",
+"Yo nunca he tenido una situación que casi me mete en un lío serio",
+
+"Yo nunca he ocultado algo para evitar problemas grandes",
+"Yo nunca he tenido una historia que cambiaría si pudiera",
+"Yo nunca he hecho algo impulsivo que salió muy mal",
+"Yo nunca he estado en una situación muy incómoda sin poder salir",
+"Yo nunca he tenido una anécdota que no contaría ni de broma",
+
+"Yo nunca he tomado una decisión que sabía que era mala idea",
+"Yo nunca he tenido un momento de 'esto se ha ido de las manos'",
+"Yo nunca he hecho algo que podría haber acabado peor",
+"Yo nunca he estado en medio de un lío fuerte",
+"Yo nunca he sido parte de algo que se descontroló",
+
+"Yo nunca he hecho algo que me hizo replantearme todo después",
+"Yo nunca he tenido una noche que empezó normal y acabó fatal",
+"Yo nunca he hecho algo que no repetiría ni por dinero",
+"Yo nunca he tenido una situación que casi me delata",
+"Yo nunca he pensado 'como se enteren estoy muerto'",
+
+"Yo nunca he tenido una historia que si se cuenta cambia la imagen que tienen de mí",
+"Yo nunca he hecho algo que me hizo sentir muy incómodo después",
+"Yo nunca he tenido una experiencia que me superó",
+"Yo nunca he cruzado una línea que no debía",
+"Yo nunca he hecho algo que aún me da vueltas en la cabeza",
+
+"Yo nunca he tenido una noche que fue demasiado lejos",
+"Yo nunca he estado en un momento donde todo se volvió caótico",
+"Yo nunca he hecho algo que me dejó sin explicación",
+"Yo nunca he tenido una situación que podría haber acabado muy mal",
+"Yo nunca he sido responsable de un caos grande",
+   
+
+"Yo nunca he pensado algo que no diría en voz alta aquí",
+"Yo nunca he tenido una doble cara en alguna situación",
+"Yo nunca he ocultado una verdad importante",
+"Yo nunca he sentido que estaba jugando con fuego",
+"Yo nunca he tenido una noche que se me fue completamente de control",
+
+"Yo nunca he hecho algo por impulso que luego me pesó mucho",
+"Yo nunca he tenido un pensamiento que me sorprendió a mí mismo",
+"Yo nunca he fingido ser alguien que no soy",
+"Yo nunca he tenido una situación que me dejó marcado",
+"Yo nunca he sentido que estaba cruzando un límite",
+
+"Yo nunca he tenido una historia que no contaría ni a mis amigos cercanos",
+"Yo nunca he hecho algo que cambiaría si pudiera volver atrás",
+"Yo nunca he tenido una decisión que me persigue",
+"Yo nunca he estado en un momento donde sabía que todo podía salir mal",
+"Yo nunca he sentido que estaba en una situación demasiado intensa",
+
+"Yo nunca he tenido una conexión rara con alguien que no esperaba",
+"Yo nunca he pensado 'esto no debería estar pasando'",
+"Yo nunca he tenido un momento donde todo se volvió incómodo de golpe",
+"Yo nunca he hecho algo que me hizo cuestionarme después",
+"Yo nunca he sentido que alguien sabía más de mí de lo que debería",
+
+"Yo nunca he tenido una noche que parece sacada de una película",
+"Yo nunca he hecho algo solo por adrenalina pura",
+"Yo nunca he tenido una situación que casi se descontrola",
+"Yo nunca he sentido que estaba perdiendo el control",
+"Yo nunca he tenido una experiencia que no sé cómo explicar",
+
+"Yo nunca he pensado algo y actuar distinto a propósito",
+"Yo nunca he tenido una situación que me hizo dudar de mí",
+"Yo nunca he hecho algo que no encaja con cómo soy",
+"Yo nunca he tenido un momento que me dejó en shock",
+"Yo nunca he sentido que estaba metido en algo demasiado grande"
+
+
+   
+]   
   },
 
 
@@ -1715,11 +2007,17 @@
 
 
 
-  
-  "ruleta": [
-    "Bebe 1", 
-    "Manda 2", 
-    "Beben todos", 
-    "Chupito!"
-  ]
+"ruleta": [
+"Beben todos",
+"Chupito",
+"Elige a alguien: bebe 2",
+"Elige a dos: beben 1",
+"Bebes tú 2",
+
+"El de tu derecha bebe 2",
+"El de tu izquierda bebe 2",
+"El último en aplaudir bebe",
+"El último en tocar la mesa bebe",
+"El último en levantarse bebe"
+]
 }
