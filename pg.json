@@ -1,0 +1,68 @@
+{
+  "trivia": [
+    {"q": "¿En qué año se hundió el Titanic?", "a": "1912"},
+    {"q": "¿Cuántos corazones tiene un pulpo?", "a": "Tres"},
+    {"q": "¿Cuál es la capital de Italia?", "a": "Roma"},
+    {"q": "¿Quién pintó la Mona Lisa?", "a": "Leonardo da Vinci"}
+  ],
+  "adivina": [
+    "Preservativo", 
+    "Tinder", 
+    "Resaca", 
+    "Suegra", 
+    "Orgía", 
+    "Borrachera", 
+    "Divorcio", 
+    "Erección", 
+    "Chupito", 
+    "Amante"
+  ],
+  "votos": [
+    "¿Quién es más probable que acabe en la cárcel?",
+    "¿Quién es el más pervertido?",
+    "¿Quién huele peor?",
+    "¿Quién es el más tacaño?",
+    "¿Quién llora más por su ex?"
+  ],
+  "cadenas": [
+    "Marcas de condones", 
+    "Posturas", 
+    "Bebidas blancas", 
+    "Sitios raros para hacerlo"
+  ],
+  "risa": [
+    "Imita un orgasmo", 
+    "Canta el himno llorando", 
+    "Baila como un pollo"
+  ],
+  "senalado": [
+    "Bebe el más bajo", 
+    "Bebe si tienes tatuajes", 
+    "Bebe el que tenga más batería"
+  ],
+  "todos": [
+    "Cascada!", 
+    "Último en tocar el suelo bebe", 
+    "Todos los hombres beben"
+  ],
+  "nunca": {
+    "suave": [
+      "Yo nunca me he caído en público",
+      "Yo nunca he mentido en mi edad"
+    ],
+    "picante": [
+      "Yo nunca he enviado un nude",
+      "Yo nunca me he enrollado con el ex de un amigo"
+    ],
+    "salvaje": [
+      "Yo nunca he hecho un trío",
+      "Yo nunca lo he hecho en un lugar público"
+    ]
+  },
+  "ruleta": [
+    "Bebe 1", 
+    "Manda 2", 
+    "Beben todos", 
+    "Chupito!"
+  ]
+}
