@@ -4,7 +4,7 @@
     "canales": {
         "daznf1": {
             "nombre": "DAZN F1",
-            "url": "HTTP://TEST.LOCALHOST"
+            "url": "http://127.0.0.1:6878/ace/getstream?id=82b4f249788f93b8f9ce968803662d7cd4f1b8cc&pid=23140"
         }
     }
 }
