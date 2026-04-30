@@ -1,6 +1,4 @@
 {
-    "default_res": "Original",
-    "default_bitrate": "Auto",
     "canales": {
         "daznf1": {
             "nombre": "DAZN F1",
