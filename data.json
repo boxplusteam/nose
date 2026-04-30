@@ -1,8 +1,8 @@
 {
     "canales": {
-        "daznf1": {
-            "nombre": "DAZN F1",
-            "url": "http://127.0.0.1:6878/ace/getstream?id=82b4f249788f93b8f9ce968803662d7cd4f1b8cc&pid=23140"
+        "dzlaliga": {
+            "nombre": "DAZN LALIGA",
+            "url": "http://127.0.0.1:6878/ace/getstream?id=dda5d2cace9bc4cb0918e62bc50d657d4a10496a&pid=39075"
         },
             "f14k": {
             "nombre": "DAZN F1 4k",
