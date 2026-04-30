@@ -1,25 +1,10 @@
 {
     "canales": {
-        "dzlaliga": {
-            "nombre": "DAZN LALIGA",
-            "url": "http://127.0.0.1:6878/ace/getstream?id=dda5d2cace9bc4cb0918e62bc50d657d4a10496a&pid=39075"
-        },
-            "f14k": {
+       
+         "f14k": {
             "nombre": "DAZN F1 4k",
             "url": "http://127.0.0.1:6878/ace/getstream?id=c8ad94585fbe13cfc9074c2b5e23fb6344e0f66d&pid=27167"
-        },
-        "mlaliga": {
-            "nombre": "Movistar La Liga",
-            "url": "http://127.0.0.1:6878/ace/getstream?id=31c19ffb3472c289c5bbbbc174449c8ed0d19e38&pid=48444"
-        },
-             
-        "bra": {
-            "nombre": "Brazzers",
-            "url": "http://127.0.0.1:6878/ace/getstream?id=993b7c1b4b0eca3e8770c483915fd419e2f59ce5&pid=3059"
-        },
-        "terror": {
-            "nombre": "M+ Terror",
-            "url": "http://127.0.0.1:6878/ace/getstream?id=b331dcd389eaf6d4af356245cc0a02a3c478d3ed&pid=10047"
         }
+       
     }
 }
