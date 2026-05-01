@@ -1,0 +1,233 @@
+import os
+import json
+import time
+import subprocess
+import urllib.request
+import logging
+import shutil
+import threading
+from http.server import BaseHTTPRequestHandler, HTTPServer
+
+# --- CONFIGURACIÓN ESTRICTA ---
+JSON_URL = "https://raw.githubusercontent.com/boxplusteam/nose/refs/heads/main/data.json"
+BASE_PATH = r"D:\hls"
+PUERTO_PROXY = 8080 # Tu Cloudflare Tunnel debe apuntar a localhost:8080
+
+# Preparación del entorno de trabajo
+if not os.path.exists(BASE_PATH):
+    os.makedirs(BASE_PATH, exist_ok=True)
+
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(message)s',
+    handlers=[
+        logging.FileHandler(os.path.join(BASE_PATH, "gestor.log"), encoding='utf-8'),
+        logging.StreamHandler()
+    ]
+)
+
+# Estado en memoria (Zero-Disk-JSON)
+procesos_activos = {}
+datos_actuales_ram = None
+ultimo_acceso = {} # Diccionario para rastrear la actividad de cada canal
+
+def matar_todo_y_limpiar():
+    """Fuerza el cierre de FFmpeg y limpia el directorio de trabajo."""
+    global procesos_activos, ultimo_acceso
+    logging.info("!!! CAMBIO DETECTADO EN JSON: Forzando reinicio total !!!")
+
+    for cid, proc in procesos_activos.items():
+        try:
+            proc.kill()
+        except:
+            pass
+    procesos_activos.clear()
+    ultimo_acceso.clear()
+
+    os.system("taskkill /IM ffmpeg.exe /F >nul 2>&1")
+    time.sleep(2) 
+
+    for elemento in os.listdir(BASE_PATH):
+        ruta = os.path.join(BASE_PATH, elemento)
+        if os.path.isdir(ruta):
+            try:
+                shutil.rmtree(ruta)
+            except Exception as e:
+                logging.error(f"Error limpiando carpeta {elemento}: {e}")
+
+def escanear_url():
+    """Descarga el contenido del JSON directamente a la RAM."""
+    try:
+        req = urllib.request.Request(JSON_URL, headers={'User-Agent': 'Mozilla/5.0'})
+        with urllib.request.urlopen(req, timeout=15) as response:
+            return json.loads(response.read().decode('utf-8'))
+    except Exception as e:
+        logging.error(f"Error escaneando la URL: {e}")
+        return None
+
+def lanzar_ffmpeg(cid, info):
+    """Inicia FFmpeg con los parámetros técnicos requeridos."""
+    url = info.get("url")
+    if not url: return None
+
+    ruta_hls = os.path.join(BASE_PATH, cid)
+    os.makedirs(ruta_hls, exist_ok=True)
+    output = os.path.join(ruta_hls, "index.m3u8")
+
+    cmd = [
+        "ffmpeg", "-hide_banner", "-y",
+        "-reconnect", "1", "-reconnect_at_eof", "1", "-reconnect_streamed", "1", "-reconnect_delay_max", "5",
+        "-i", url,
+        "-c:v", "copy", "-c:a", "copy",
+        "-f", "hls", "-hls_time", "4", "-hls_list_size", "6",
+        "-hls_flags", "delete_segments+append_list+discont_start",
+        output
+    ]
+
+    try:
+        si = subprocess.STARTUPINFO()
+        si.dwFlags |= subprocess.STARTF_USESHOWWINDOW
+        si.wShowWindow = 7
+
+        return subprocess.Popen(
+            cmd,
+            creationflags=subprocess.CREATE_NEW_CONSOLE,
+            startupinfo=si
+        )
+    except Exception as e:
+        logging.error(f"Error al iniciar canal {cid}: {e}")
+        return None
+
+# =====================================================================
+# LÓGICA ON-DEMAND (SERVIDOR HTTP INTEGRADO)
+# =====================================================================
+class ServidorOnDemand(BaseHTTPRequestHandler):
+    def log_message(self, format, *args):
+        pass # Silenciamos los logs de peticiones .ts para no saturar la consola
+
+    def do_GET(self):
+        global datos_actuales_ram, procesos_activos, ultimo_acceso
+        
+        # Parsear la ruta (ej: /canal1/index.m3u8)
+        ruta = self.path.strip("/")
+        partes = ruta.split("/")
+        
+        if len(partes) < 2:
+            self.send_error(404, "Ruta no valida. Usa /ID_CANAL/index.m3u8")
+            return
+            
+        cid = partes[0]
+        archivo = partes[1]
+
+        # 1. RECIBE LA PETICIÓN Y ACTUALIZA EL LATIDO (Mantiene vivo el stream)
+        ultimo_acceso[cid] = time.time()
+
+        canales = datos_actuales_ram.get("canales", {}) if datos_actuales_ram else {}
+
+        if archivo == "index.m3u8":
+            if cid not in canales:
+                self.send_error(404, "Canal no existe en el JSON actual")
+                return
+
+            # 2. COMPRUEBA: ¿YA ESTÁ FFMPEG CORRIENDO?
+            proc = procesos_activos.get(cid)
+            if proc is None or proc.poll() is not None:
+                # 3. SI NO: Lanza el comando
+                logging.info(f"▶️ PLAY ON-DEMAND: Encendiendo canal [{cid}]")
+                nuevo_proc = lanzar_ffmpeg(cid, canales[cid])
+                if nuevo_proc:
+                    procesos_activos[cid] = nuevo_proc
+
+                # Retiene la petición hasta que FFmpeg cree el archivo (Máximo 10 segundos)
+                ruta_m3u8 = os.path.join(BASE_PATH, cid, "index.m3u8")
+                intentos = 0
+                while not os.path.exists(ruta_m3u8) and intentos < 100:
+                    time.sleep(0.1)
+                    intentos += 1
+            # 4. SI SÍ: No hace nada, sigue adelante para servir el archivo
+            
+        # Entregar el archivo (.m3u8 o .ts) desde D:\hls
+        ruta_archivo = os.path.join(BASE_PATH, cid, archivo)
+        if os.path.exists(ruta_archivo):
+            try:
+                with open(ruta_archivo, 'rb') as f:
+                    contenido = f.read()
+                
+                self.send_response(200)
+                # Cabeceras estrictas para que reproductores IPTV no den error de CORS ni caché
+                self.send_header('Access-Control-Allow-Origin', '*')
+                if archivo.endswith(".m3u8"):
+                    self.send_header('Content-type', 'application/vnd.apple.mpegurl')
+                    self.send_header('Cache-Control', 'no-cache, no-store, must-revalidate')
+                elif archivo.endswith(".ts"):
+                    self.send_header('Content-type', 'video/mp2t')
+                    self.send_header('Cache-Control', 'public, max-age=3600')
+                self.end_headers()
+                
+                self.wfile.write(contenido)
+            except Exception as e:
+                self.send_error(500, "Error de lectura en disco")
+        else:
+            self.send_error(404, "Streaming en proceso de arranque. Recarga en unos segundos.")
+
+def hilo_limpiador():
+    """Hilo secundario que apaga los canales que nadie está viendo."""
+    global procesos_activos, ultimo_acceso
+    while True:
+        ahora = time.time()
+        for cid in list(procesos_activos.keys()):
+            # Un reproductor IPTV pide el archivo cada 4-6 segundos. 
+            # Si pasan 60s sin que nadie pida nada, es que han apagado la tele o cambiado de canal.
+            if ahora - ultimo_acceso.get(cid, ahora) > 60:
+                logging.info(f"⏹️ STOP AUTOMÁTICO: Apagando canal por inactividad [{cid}]")
+                try:
+                    procesos_activos[cid].kill()
+                except:
+                    pass
+                del procesos_activos[cid]
+                if cid in ultimo_acceso:
+                    del ultimo_acceso[cid]
+                
+                # Borrar basura residual del disco
+                ruta_hls = os.path.join(BASE_PATH, cid)
+                if os.path.exists(ruta_hls):
+                    shutil.rmtree(ruta_hls, ignore_errors=True)
+                    
+        time.sleep(10)
+
+def hilo_json():
+    """Hilo secundario que actualiza el JSON cada minuto como pediste."""
+    global datos_actuales_ram
+    while True:
+        time.sleep(60)
+        nuevo_contenido = escanear_url()
+        if nuevo_contenido and nuevo_contenido != datos_actuales_ram:
+            matar_todo_y_limpiar()
+            datos_actuales_ram = nuevo_contenido
+
+def main():
+    global datos_actuales_ram
+
+    if not shutil.which("ffmpeg"):
+        logging.critical("FFmpeg no encontrado en el sistema.")
+        return
+
+    # Escaneo inicial del JSON antes de arrancar
+    datos_actuales_ram = escanear_url()
+
+    # Arrancar subprocesos en segundo plano
+    threading.Thread(target=hilo_json, daemon=True).start()
+    threading.Thread(target=hilo_limpiador, daemon=True).start()
+
+    # Arrancar el servidor Principal
+    try:
+        servidor = HTTPServer(('0.0.0.0', PUERTO_PROXY), ServidorOnDemand)
+        logging.info(f"=== SERVIDOR IPTV ON-DEMAND ACTIVO ===")
+        logging.info(f"Escuchando en el puerto {PUERTO_PROXY}. Apunta tu Cloudflare Tunnel aquí.")
+        servidor.serve_forever()
+    except KeyboardInterrupt:
+        matar_todo_y_limpiar()
+        logging.info("Servidor apagado manualmente.")
+
+if __name__ == "__main__":
+    main()
