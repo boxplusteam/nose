@@ -16,6 +16,11 @@
         "dzla": {
             "nombre": "DAZN LALIGA",
             "url": "http://127.0.0.1:6878/ace/getstream?id=dda5d2cace9bc4cb0918e62bc50d657d4a10496a&pid=41851"
+        },
+
+        "mlac": {
+            "nombre": "M+ LA LIGA CAMPEONES",
+            "url": "http://127.0.0.1:6878/ace/getstream?id=e572a5178ff72eed7d1d751a18b4b3419699f370&pid=38610"
         }
 
         
