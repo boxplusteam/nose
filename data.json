@@ -1,25 +1,14 @@
 {
     "canales": {
 
-        "dzla": {
-            "nombre": "DAZN LALIGA",
-            "url": "71cb5e2567a8b39f5bdc4fa791992781b052f0bc"
-        },
+        
         
          "f14k": {
             "nombre": "DAZN F1 4k",
             "url": "http://127.0.0.1:6878/ace/getstream?id=c8ad94585fbe13cfc9074c2b5e23fb6344e0f66d&pid=27167"
-        },
-
-        "mla": {
-            "nombre": "M+ LALIGA",
-            "url": "http://127.0.0.1:6878/ace/getstream?id=b3bdd6ef7f795c4f321a3ce5cf4907338f462929"
-        },
-        
-        "mlac": {
-            "nombre": "M+ La liga campeones",
-            "url": "http://127.0.0.1:6878/ace/getstream?id=778f08cbae9596ed9e8b2ae0af33ee7a6fe24c6a"
         }
+
+        
         
 
         
