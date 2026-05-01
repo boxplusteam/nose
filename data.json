@@ -13,17 +13,17 @@
 
         "dzla": {
             "nombre": "DAZN LALIGA",
-            "url": "http://127.0.0.1:6878/ace/getstream?id=dda5d2cace9bc4cb0918e62bc50d657d4a10496a&pid=18374"
+            "url": "http://127.0.0.1:6878/ace/getstream?id=dda5d2cace9bc4cb0918e62bc50d657d4a10496a&pid=47168"
         },
 
         "mla": {
             "nombre": "M+ LALIGA",
-            "url": "http://127.0.0.1:6878/ace/getstream?id=b0260a1261eb3817c353ef0a6862747dee18cdda&pid=36635"
+            "url": "http://127.0.0.1:6878/ace/getstream?id=31c19ffb3472c289c5bbbbc174449c8ed0d19e38&pid=18393"
         },
 
         "mlac": {
             "nombre": "M+ La liga campeones",
-            "url": "http://127.0.0.1:6878/ace/getstream?id=afbf2a479c5a5072698139f0f556ef3e77a99bd0&pid=25730"
+            "url": "http://127.0.0.1:6878/ace/getstream?id=e572a5178ff72eed7d1d751a18b4b3419699f370&pid=45910"
         }
 
 
