@@ -11,6 +11,11 @@
         "mla": {
             "nombre": "Mlaliga",
             "url": "http://127.0.0.1:6878/ace/getstream?id=31c19ffb3472c289c5bbbbc174449c8ed0d19e38&pid=38053"
+        },
+
+        "dzla": {
+            "nombre": "DAZN LALIGA",
+            "url": "http://127.0.0.1:6878/ace/getstream?id=dda5d2cace9bc4cb0918e62bc50d657d4a10496a&pid=41851"
         }
 
         
