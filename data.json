@@ -24,12 +24,9 @@
         "mlac": {
             "nombre": "M+ LA LIGA CAMPEONES",
             "url": "http://127.0.0.1:6878/ace/getstream?id=e572a5178ff72eed7d1d751a18b4b3419699f370&pid=38610"
-        }
+        },
 
-        
-        
-
-         "canal_1": {
+"canal_1": {
     "nombre": "M+ DEPORTES FHD --> NEW ERA II",
     "url": "http://127.0.0.1:6878/ace/getstream?id=54470f2db47abeff1f809a0a7262e6f7d7796a4e"
   },
@@ -752,8 +749,10 @@
   "canal_181": {
     "nombre": "Tennis Channel HD --> NEW LOOP",
     "url": "http://127.0.0.1:6878/ace/getstream?id=039fae21c9e7e5214d3d898cba80863e37e623ac"
-  },
+  }
+
         
+      
 
         
 
