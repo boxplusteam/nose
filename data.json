@@ -1,7 +1,609 @@
 {
     "canales": {
 
+  "canal_1": {
+    "nombre": "M+ DEPORTES FHD --> NEW ERA II",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=54470f2db47abeff1f809a0a7262e6f7d7796a4e"
+  },
+  "canal_2": {
+    "nombre": "#VAMOS FHD --> NEW ERA II",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=c6b52ffb3b84836d334569204797d88bf15d48fa"
+  },
+  "canal_3": {
+    "nombre": "#VAMOS ELLAS  FHD --> NEW ERA II",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=af636e7b1747cf868eedf242b96bd98f8fbbed4f"
+  },
+  "canal_4": {
+    "nombre": "DAZN F1 FHD --> NEW ERA II",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=c367738691c63896679e523d4c1c7933729acc7b"
+  },
+  "canal_5": {
+    "nombre": "LaLiga TV BAR FHD --> NEW ERA II",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=ec6ce96a4e4eb523108418a84babc9eca4b4c507"
+  },
+  "canal_6": {
+    "nombre": "LALIGA HYPERMOTION TV FHD --> NEW ERA II",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=4e066df67d118f95b41f850869abdc663c515186"
+  },
+  "canal_7": {
+    "nombre": "EUROSPORT 2 FHD --> NEW ERA II",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=0358f9db953e5fde91c34d7ed4bc368939b49853"
+  },
+  "canal_8": {
+    "nombre": "M.L. CAMPEONES 2",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=abdf9058786a48623d0de51a3adb414ae10b6e72"
+  },
+  "canal_9": {
+    "nombre": "MOVISTAR PLUS",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=56ac8e227d526e722624675ccdd91b0cc850582f"
+  },
+  "canal_10": {
+    "nombre": "M DEPORTES",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=55d4602cb22b0d8a33c10c2c2f42dae64a9e8895"
+  },
+  "canal_11": {
+    "nombre": "M DEPORTES",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=3a74d9869b13e763476800740c6625e715a39879"
+  },
+  "canal_12": {
+    "nombre": "M DEPORTES 2",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=d8c2ed470e847154a88f011137cc206319f6bed5"
+  },
+  "canal_13": {
+    "nombre": "M DEPORTES 5",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=fcc0fd75bf1dba40b108fcf0d3514e0e549bfbac"
+  },
+  "canal_14": {
+    "nombre": "M DEPORTES 6",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=cc5782d37ae6b6e0bab396dd64074982d0879046"
+  },
+  "canal_15": {
+    "nombre": "M DEPORTES 7",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=070f82d6443a52962d6a2ed9954c979b29404932"
+  },
+  "canal_16": {
+    "nombre": "DAZN 1",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=35c7f0c966ecde3390f4510bb4caded40018c07a"
+  },
+  "canal_17": {
+    "nombre": "DAZN 2",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=ca923c9873fd206a41c1e83ff8fc40e3cf323c9a"
+  },
+  "canal_18": {
+    "nombre": "DAZN 2",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=a929eeec1268d69d1556a2e3ace793b2577d8810"
+  },
+  "canal_19": {
+    "nombre": "M #VAMOS",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=d03c13b6723f66155d7a0df3692a3b073fe630f2"
+  },
+  "canal_20": {
+    "nombre": "M #VAMOS",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=12ba546d229bc39f01c3c18988a034b215fe6adb"
+  },
+  "canal_21": {
+    "nombre": "EuroSport",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=16ffa1713f42aa27317ee039a2bd0cdbc89a1580"
+  },
+  "canal_22": {
+    "nombre": "Copa del Rey",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=b51f2d9a15b6956a44385b6be531bcabeb099d9d"
+  },
+  "canal_23": {
+    "nombre": "DAZN F1 1080 (Fórmula 1)",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=d6281d4e6310269b416180442a470d23a4a99dc9"
+  },
+  "canal_24": {
+    "nombre": "DAZN F1 1080 (Fórmula 1)",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=2c6e4c897661e6b0257bfe931b66d20b2ec763b6"
+  },
+  "canal_25": {
+    "nombre": "DAZN F1 1080 (Fórmula 1)",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=71eef80158aa8b37f3dc59f6793c6696df9a2dfa"
+  },
+  "canal_26": {
+    "nombre": "DAZN F1 720 (Fórmula 1)",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=268289e7a3c5209960b53b4d43c8c65fab294b85"
+  },
+  "canal_27": {
+    "nombre": "M. LaLiga 1080P",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=94d34491106e00394835c8cb68aa94481339b53f"
+  },
+  "canal_28": {
+    "nombre": "M. LaLiga 1080 MultiAudio",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=d3de78aebe544611a2347f54d5796bd87f16c92d"
+  },
+  "canal_29": {
+    "nombre": "M. LaLiga 1080 MultiAudio",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=6d05b31e5e8fdae312fbd57897363a7b10ddb163"
+  },
+  "canal_30": {
+    "nombre": "M. LaLiga 720",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=1bc437bce57b4b0450f6d1f8d818b7e97000745e"
+  },
+  "canal_31": {
+    "nombre": "M. LaLiga 2 1080",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=83c6c4942d69f4aa324aa746c5d7dbfd7d1572b3"
+  },
+  "canal_32": {
+    "nombre": "M. LaLiga 2 720",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=f31a586422c9244196c810c84b6c85da350318a5"
+  },
+  "canal_33": {
+    "nombre": "M. LaLiga 3 1080",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=ebe14f1edeb49f2253e3b355a8beeadc9b4f0bc4"
+  },
+  "canal_34": {
+    "nombre": "M. LaLiga 3 720",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=835639b89db00cc0d94660da3c10b6e38bfbcdc1"
+  },
+  "canal_35": {
+    "nombre": "M. LaLiga 4 1080",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=68697ea4f261289d97bbc3418ad3cbc4180aa32f"
+  },
+  "canal_36": {
+    "nombre": "La Liga BAR 1080",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=608b0faf7d3d25f6fe5dba13d5e4b4142949990e"
+  },
+  "canal_37": {
+    "nombre": "La Liga BAR 1080",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=94d34491106e00394835c8cb68aa94481339b53f"
+  },
+  "canal_38": {
+    "nombre": "DAZN LaLiga 1080 MultiAudio",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=110d441ddc9713a7452588770d2bc85504672f47"
+  },
+  "canal_39": {
+    "nombre": "DAZN LaLiga 1080 MultiAudio",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=ec29289b0b14756e686c03a501bae1efa05be70c"
+  },
+  "canal_40": {
+    "nombre": "DAZN LaLiga 1080 MultiAudio",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=6de4794cd02f88f14354b5996823413a59a1de0f"
+  },
+  "canal_41": {
+    "nombre": "DAZN LaLiga 720",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=8c8c1e047a1c5ed213ba74722a5345dc55c3c0eb"
+  },
+  "canal_42": {
+    "nombre": "DAZN LaLiga 2 1080 MultiAudio",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=51dbbfb42f8091e4ea7a2186b566a40e780953d9"
+  },
+  "canal_43": {
+    "nombre": "DAZN LaLiga 2 720 MultiAudio",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=97ba38d47680954be40e48bd8f43e17222fefecb"
+  },
+  "canal_44": {
+    "nombre": "LaLiga HYPERMOTION 1080",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=b2706a7ffbea236a3b398139a3a606ada664c0eb"
+  },
+  "canal_45": {
+    "nombre": "LaLiga HYPERMOTION 720",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=121f719ebb94193c6086ef92865cf9b197750980"
+  },
+  "canal_46": {
+    "nombre": "LaLiga HYPERMOTION 2 1080",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=0cfdfde1b70623b8c210b0f7301be2a87456481d"
+  },
+  "canal_47": {
+    "nombre": "LaLiga HYPERMOTION 2 720",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=0a335406bad0b658aeddb2d38f8c0614b2e5623a"
+  },
+  "canal_48": {
+    "nombre": "LaLiga HYPERMOTION 3",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=fefd45ed6ff415e05f1341b7d9da2988eacd13ea"
+  },
+  "canal_49": {
+    "nombre": "DAZN 1 FHD --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=666509475f609a4dec1826bf477e7da84e1af7e4"
+  },
+  "canal_50": {
+    "nombre": "DAZN F1 FHD --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=83d46a1a62104c72ad1487d81c0e81f92db00d25"
+  },
+  "canal_51": {
+    "nombre": "DAZN LA LIGA 2 FHD --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=5a022eaf3e068b8016bb6175843405f41c521ecd"
+  },
+  "canal_52": {
+    "nombre": "DAZN 1 BAR FHD --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=a51e178bcc789cd644c9b1742723c05aa6419a31"
+  },
+  "canal_53": {
+    "nombre": "DAZN 2 BAR FHD --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=4c879c1af3a1783d80ee325a753f32f62f482ffa"
+  },
+  "canal_54": {
+    "nombre": "DAZN F1 FHD (SAT) --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=21511645a5f014cb64f85d445482a8a14bba9e62"
+  },
+  "canal_55": {
+    "nombre": "F1 TV 14 | Fernando Alonso | Aston Martin --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=e153268daebe815049c03a8b495bb56ec13de1a1"
+  },
+  "canal_56": {
+    "nombre": "F1 TV 55 | Carlos Sainz | Williams --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=7199dc932a08926949778e50c0e10307cdbd8d33"
+  },
+  "canal_57": {
+    "nombre": "MGPTV | Camara de a bordo 1 --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=16680604bc1edbaa8be143c0f1c942a0f7dc3dfe"
+  },
+  "canal_58": {
+    "nombre": "MGPTV | Camara de a bordo 2 --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=d8566343d786ae6cb3ae06b5ecd591b122a2abd9"
+  },
+  "canal_59": {
+    "nombre": "MGPTV | Camara de a bordo 3 --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=a7924def847da9e709938b8c3999150006d4e2c7"
+  },
+  "canal_60": {
+    "nombre": "MGPTV | Camara de a bordo 4 --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=26c836e6cd34a77eec06512f86cb66fed89518b4"
+  },
+  "canal_61": {
+    "nombre": "DAZN EVENTOS 1 --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=138733f32ee4423be4e56f5d9ee50c07164aec47"
+  },
+  "canal_62": {
+    "nombre": "DAZN EVENTOS 2 --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=e350db272d5a6f7a0c28abb1a77a46e0d2d0bee3"
+  },
+  "canal_63": {
+    "nombre": "DAZN EVENTOS 3 --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=c23b31bf75b17132a6a3339a66b90578a279a8a9"
+  },
+  "canal_64": {
+    "nombre": "DAZN BUNDESLIGA 1 FHD --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=9d1b91954467045ed96e83287875ca576f0fbff1"
+  },
+  "canal_65": {
+    "nombre": "DAZN BUNDESLIGA 2 FHD --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=dc2c20a1648bea463a741104010d787120490225"
+  },
+  "canal_66": {
+    "nombre": "DAZN BUNDESLIGA 3 FHD --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=091a11e6336d290aba3d45a3ed78916252ba7933"
+  },
+  "canal_67": {
+    "nombre": "Gol Play FHD --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=8286d07ed38f9d5512b7d16bb42272da6da8aec1"
+  },
+  "canal_68": {
+    "nombre": "Teledeporte FHD --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=3e5802aeefabc9e069600f8a92b6dc250a678f76"
+  },
+  "canal_69": {
+    "nombre": "DAZN 1 FHD (SAT) --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=5355305c9e5e28da483a1a977d12027878af8094"
+  },
+  "canal_70": {
+    "nombre": "MOVISTAR GOLF FHD --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=f5136692f392e037e5c4da004b375c096d2abe70"
+  },
+  "canal_71": {
+    "nombre": "MOVISTAR GOLF 2 FHD --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=c0ecc32b018d473823154adbc2a604934387ab54"
+  },
+  "canal_72": {
+    "nombre": "MOVISTAR SERIES FHD --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=226d067f3022a15bbc9332dce19c26a1d7bbc843"
+  },
+  "canal_73": {
+    "nombre": "MOVISTAR CLASICOS FHD --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=eeea4f9de29fb23bb6db4c11b4e973f14bfe6bc0"
+  },
+  "canal_74": {
+    "nombre": "M+ LIGA DE CAMPEONES FHD (1 opcion) --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=7cdf501671e3a34e56f1686471ccd2f587cade7c"
+  },
+  "canal_75": {
+    "nombre": "M+ LIGA DE CAMPEONES FHD --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=3b65b877ad3c0f53818f0639f0bbcad3ce17304a"
+  },
+  "canal_76": {
+    "nombre": "M+ LIGA DE CAMPEONES FHD (SAT) --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=291b9c214f300da6c1e141d3c631d102874208cf"
+  },
+  "canal_77": {
+    "nombre": "M+ LIGA DE CAMPEONES 2 FHD --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=335accd8a0d7e890fab2f1c3a75af71d25fa99f7"
+  },
+  "canal_78": {
+    "nombre": "M+ LIGA DE CAMPEONES 2 FHD --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=b8e1eafbadc0199b38542a8689a64fddc33c0ef4"
+  },
+  "canal_79": {
+    "nombre": "M+ LIGA DE CAMPEONES 3 FHD --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=af941699c66fe83312b838397d86e91ef1228cfc"
+  },
+  "canal_80": {
+    "nombre": "M+ LIGA DE CAMPEONES 4 FHD --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=d0fb8510b35dcdff7b3208c899a067608ee9b1a4"
+  },
+  "canal_81": {
+    "nombre": "M+ LIGA DE CAMPEONES 5 FHD --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=6d27a521cf8542b3e06d2415cbeeb10310bd00b0"
+  },
+  "canal_82": {
+    "nombre": "M+ LIGA DE CAMPEONES 6 FHD --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=8d955dfe2346187857ccf38a208bfcc0d19939f2"
+  },
+  "canal_83": {
+    "nombre": "M+ LIGA DE CAMPEONES 7 FHD --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=52f486f1e8c2ce43f4d68af0446d2f67be7aab2b"
+  },
+  "canal_84": {
+    "nombre": "M+ LIGA DE CAMPEONES 8 FHD --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=406c2dd3343a68d3cfc523c6810cfa8534e278f6"
+  },
+  "canal_85": {
+    "nombre": "M+ LIGA DE CAMPEONES 9 FHD --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=17301b69c976242109cf0f42dd05586ea15eddcb"
+  },
+  "canal_86": {
+    "nombre": "M+ LIGA DE CAMPEONES 10 FHD --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=9d240bb8ef17a83c455f9d3da61f570a08b59214"
+  },
+  "canal_87": {
+    "nombre": "M+ LIGA DE CAMPEONES 11 FHD --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=cf6b8c94d2c998ec298255c518bdc2e8bf2a14f1"
+  },
+  "canal_88": {
+    "nombre": "M+ LIGA DE CAMPEONES 12 FHD --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=be07aa5f16acd87a145cce78514d696b955fff64"
+  },
+  "canal_89": {
+    "nombre": "M+ LIGA DE CAMPEONES 13 FHD --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=d52b0b671372ee6e2a52a6a48d80df487e7af1c4"
+  },
+  "canal_90": {
+    "nombre": "M+ LIGA DE CAMPEONES 14 SD --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=2e1f74badbff8d9420aee9f75479b86a0bfe75b8"
+  },
+  "canal_91": {
+    "nombre": "M+ LIGA DE CAMPEONES 15 SD --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=5433440a12c1f1c1f4e6ac54e0ab7b9861d7285b"
+  },
+  "canal_92": {
+    "nombre": "M+ LIGA DE CAMPEONES 16 SD --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=bba5037e3cb2155106fdc52e9ee6a247f8ace37c"
+  },
+  "canal_93": {
+    "nombre": "M+ LIGA DE CAMPEONES 17 SD --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=e4ad38d03cb38470c8b5dfad33108f0264d403c7"
+  },
+  "canal_94": {
+    "nombre": "M+ Super Copa (SAT) --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=788426457b6eefd4ee4eef2952fc14d66044eccd"
+  },
+  "canal_95": {
+    "nombre": "M+ Super Copa --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=8c85e8d4c12ecf032e368d06355e22322b5eb711"
+  },
+  "canal_96": {
+    "nombre": "M+ SuperCopa del Rey FHD --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=8c28fef4670a7033694cf0986ba99ba48bfcbb9f"
+  },
+  "canal_97": {
+    "nombre": "M+ LaLiga FHD --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=ce065492cf01b8d6db591064664d636e5ed87332"
+  },
+  "canal_98": {
+    "nombre": "M+ LaLiga FHD (SAT) --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=a8e82dd368fe1473980ad608e699e1c946aed310"
+  },
+  "canal_99": {
+    "nombre": "M+ LaLiga FHD --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=ae39242a70a3ec6657750a032102a1770e3b71dc"
+  },
+  "canal_100": {
+    "nombre": "M+ LaLiga 2 FHD --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=ea02dfdaf4bf770f49d99069f4699b24cde3e1bf"
+  },
+  "canal_101": {
+    "nombre": "M+ LaLiga 3 FHD --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=27625f557d10c517caa39630a34a4f92665752c2"
+  },
+  "canal_102": {
+    "nombre": "DAZN F1 FHD --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=61c1f3cf1d86a2789e985818fe2bd398048d047f"
+  },
+  "canal_103": {
+    "nombre": "DAZN 1 FHD --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=ed145ac6abd681ea3599b30b0ad2516ec0373308"
+  },
+  "canal_104": {
+    "nombre": "DAZN 2 FHD --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=bc71cd8e91bd452f6f09b8b06268effcd449ca74"
+  },
+  "canal_105": {
+    "nombre": "DAZN 3 FHD --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=af4a3e213bae53a681635ff87e23e984bf9bf800"
+  },
+  "canal_106": {
+    "nombre": "DAZN 4 FHD --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=b5430561ed4e4d1db4cf300afcae08a08c9683f6"
+  },
+  "canal_107": {
+    "nombre": "#VAMOS FHD (SAT) --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=44126aee029b8a79513c576affdbc9bfb955b990"
+  },
+  "canal_108": {
+    "nombre": "#VAMOS FHD --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=c6aeacb223e122d340523ace4992a80742bb1cad"
+  },
+  "canal_109": {
+    "nombre": "#VAMOS ELLAS  FHD --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=349d2c6bfe0742981ac2d4aeead6c3bb75f1e0c3"
+  },
+  "canal_110": {
+    "nombre": "EUROSPORT 1 FHD --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=9d7d24c076e87da2a6892f25d4e7e356aace120c"
+  },
+  "canal_111": {
+    "nombre": "EUROSPORT 1 FHD --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=063def0f5c6a8ff330f497668890e7da28d21eef"
+  },
+  "canal_112": {
+    "nombre": "EUROSPORT 2 FHD --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=d23a8e8d30e8c7492618f2b634a86c4ad202cc13"
+  },
+  "canal_113": {
+    "nombre": "M+ DEPORTES FHD --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=689a047a6911e1b8a3542e90c5d4201d95f4f7ba"
+  },
+  "canal_114": {
+    "nombre": "M+ DEPORTES 2 FHD --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=7081a13d9fab9ef28bcee55afeedda9b9bfb4251"
+  },
+  "canal_115": {
+    "nombre": "M+ ACCION FHD --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=03e3a046631f018a223eaeb700f91c0396b30ca4"
+  },
+  "canal_116": {
+    "nombre": "M+ PLUS 2 FHD --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=6cd28c9fc770b0219080932883939ec4be3a9129"
+  },
+  "canal_117": {
+    "nombre": "M+ DEPORTES 3 FHD  --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=76ef9323cbf0fcab45c7411361320c04a1b87ee9"
+  },
+  "canal_118": {
+    "nombre": "M+ DEPORTES 4 FHD --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=c0069e0b0672b36fc0b0630b59789d8cb57bf4ce"
+  },
+  "canal_119": {
+    "nombre": "M+ DEPORTES 5 HD --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=a767137594a0bc334ca0aca85ba4f6add4fa30fe"
+  },
+  "canal_120": {
+    "nombre": "UFC Fight Pass --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=c343621f224b637343c982bdad100a770094e4b9"
+  },
+  "canal_121": {
+    "nombre": "NBA TV --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=3c1314088cb0c9bb22f41baeae2b7c765229fbe9"
+  },
+  "canal_122": {
+    "nombre": "NBA NETWORK --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=e57d53acf687898873f1eea76a4c9836f82301d8"
+  },
+  "canal_123": {
+    "nombre": "LA 1 FHD --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=bb579dc810cc1cc6e17524785547fdf4ab38f730"
+  },
+  "canal_124": {
+    "nombre": "LA 2 FHD --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=51595543305ecbecba7a1f50f83e897831f6872e"
+  },
+  "canal_125": {
+    "nombre": "ANTENA 3 FHD --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=2529dd2f8f925ba2f404cd8f7d64517f0ea6b471"
+  },
+  "canal_126": {
+    "nombre": "CUATRO FHD --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=b359615ecc1eee51b142281324d3c2b7b5a99d14"
+  },
+  "canal_127": {
+    "nombre": "TELECINCO FHD --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=0b424088849ad1e59a2a2162c2cb089877778b13"
+  },
+  "canal_128": {
+    "nombre": "LA SEXTA FHD --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=706d6a63f0d721431969f9e2fe1c4abe7c34a8cb"
+  },
+  "canal_129": {
+    "nombre": "M+ PLUS FHD --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=b3c6ab1c04dd016089c39f17b9ae99ed0d3fccab"
+  },
+  "canal_130": {
+    "nombre": "LALIGA HYPERMOTION TV FHD de Tronoss",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=d16523ce797f9b7a3a378fe6d65d6cc8a94b8ff7"
+  },
+  "canal_131": {
+    "nombre": "LALIGA HYPERMOTION TV2 HD de Tronoss",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=c5efa843cf3a0ff92dcec24dd75e319adbbdc5de"
+  },
+  "canal_132": {
+    "nombre": "LALIGA HYPERMOTION TV 3 FHD de Tronoss",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=e66b50a57ebba7be1199841bdb65ef7bdfaa352d"
+  },
+  "canal_133": {
+    "nombre": "LALIGA HYPERMOTION TV4 FHD de Tronoss",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=c0ab266c14c1bc91527fb3f8086d16fbad9119cb"
+  },
+  "canal_134": {
+    "nombre": "LALIGA HYPERMOTION TV5 FHD de Tronoss",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=d8783077478c66ab1b07a16c57e56b3d295cb50d"
+  },
+  "canal_135": {
+    "nombre": "DAZN LA LIGA 2 FHD (*) --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=fc6064ce439f5146ca8e8b9238e5f0c009daa980"
+  },
+  "canal_136": {
+    "nombre": "DAZN 1 BAR FHD (*) --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=21c01ef861c93df6ba89e3b222481ab0bcf5d919"
+  },
+  "canal_137": {
+    "nombre": "DAZN F1 FHD (*) --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=417988354fa348ac80ffcbed58f55c50b72cdbf0"
+  },
+  "canal_138": {
+    "nombre": "DAZN 1 FHD (*) --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=21bca8a1f4229f1691108d59a89c28cb2443aed7"
+  },
+  "canal_139": {
+    "nombre": "DAZN 2 FHD (*) --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=b1d9729f86e45bfbb914802b389b8a0ae8dfd7e0"
+  },
+  "canal_140": {
+    "nombre": "DAZN 3 FHD (*) --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=ff29b4de846cd5af24af6ccd68a9dca2e61be449"
+  },
+  "canal_141": {
+    "nombre": "DAZN 4 FHD (*) --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=2144540c2d69805124f3b144f19b003f731d574b"
+  },
+  "canal_142": {
+    "nombre": "M+ LIGA DE CAMPEONES FHD (*) --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=8cdf648a52096e180e11d1d642d66d90c70b7944"
+  },
+  "canal_143": {
+    "nombre": "M+ LIGA DE CAMPEONES FHD (*) --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=34f2ce9977e2645851da008a27702e6bfb329f60"
+  },
+  "canal_144": {
+    "nombre": "M+ LIGA DE CAMPEONES 2 FHD (*) --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=741c281d736d42cc4505d6676942fcd4de750d3e"
+  },
+  "canal_145": {
+    "nombre": "M+ LIGA DE CAMPEONES 2 FHD (*) --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=6243ade85695dba697e070e4527b4a86cc455906"
+  },
+  "canal_146": {
+    "nombre": "M+ LIGA DE CAMPEONES 3 FHD (*) --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=a6a4e20ab19063af94d271ecae2e25ec125e1844"
+  },
+  "canal_147": {
+    "nombre": "M+ LIGA DE CAMPEONES 3 FHD (*) --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=d2c3bfea3b235397d25ce1893e7ac6e6cb6da36a"
+  },
+  "canal_148": {
+    "nombre": "M+ LIGA DE CAMPEONES 4 FHD (*) --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=7f13919e0c1194d514aacb43352d812a4218252b"
+  },
+  "canal_149": {
+    "nombre": "M+ LIGA DE CAMPEONES 5 FHD (*) --> NEW ERA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=fc624220b5c795b064e548fa4e5551b1bc322056"
+  },
         
+
+        
+        "dzn": {
+          "nombre": "DAZN 1",
+            "url": "http://127.0.0.1:6878/ace/getstream?id=50a8a13c474848d1efbd5586efdb5b6cdd173fa9&pid=32538"
+        },
         
          "f14k": {
             "nombre": "DAZN F1 4k",
