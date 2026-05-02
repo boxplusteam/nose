@@ -6,6 +6,113 @@ https://bg622.streamingtv339.com/daznf1/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlO1WfqtVlgVWv-Tpu9HwDfDGF72GRja7hScpBmJKzow&s=10" group-title="Deporte" , M+ La Liga
 
 
+#EXTM3U
+#EXTINF:-1 tvg-id="" tvg-name="canal_1" tvg-logo="https://www.google.com/s2/favicons?domain=dazn.com&sz=512" group-title="Deporte" , DAZN 1
+https://certified-garbage-oak-utah.trycloudflare.com/hls/canal_1/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="canal_2" tvg-logo="https://www.google.com/s2/favicons?domain=dazn.com&sz=512" group-title="Deporte" , DAZN 1 FHD
+https://certified-garbage-oak-utah.trycloudflare.com/hls/canal_2/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="canal_3" tvg-logo="https://www.google.com/s2/favicons?domain=dazn.com&sz=512" group-title="Deporte" , DANZ 1 OP 2
+https://certified-garbage-oak-utah.trycloudflare.com/hls/canal_3/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="canal_4" tvg-logo="https://www.google.com/s2/favicons?domain=dazn.com&sz=512" group-title="Deporte" , DAZN 1 OP 3
+https://certified-garbage-oak-utah.trycloudflare.com/hls/canal_4/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="canal_5" tvg-logo="https://www.google.com/s2/favicons?domain=dazn.com&sz=512" group-title="Deporte" , DAZN 2
+https://certified-garbage-oak-utah.trycloudflare.com/hls/canal_5/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="canal_6" tvg-logo="https://www.google.com/s2/favicons?domain=dazn.com&sz=512" group-title="Deporte" , DAZN 2 FHD
+https://certified-garbage-oak-utah.trycloudflare.com/hls/canal_6/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="canal_7" tvg-logo="https://www.google.com/s2/favicons?domain=dazn.com&sz=512" group-title="Deporte" , DAZN 2 OP 2
+https://certified-garbage-oak-utah.trycloudflare.com/hls/canal_7/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="canal_8" tvg-logo="https://www.google.com/s2/favicons?domain=dazn.com&sz=512" group-title="Deporte" , DAZN 3
+https://certified-garbage-oak-utah.trycloudflare.com/hls/canal_8/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="canal_9" tvg-logo="https://www.google.com/s2/favicons?domain=dazn.com&sz=512" group-title="Deporte" , DAZN 3 FHD
+https://certified-garbage-oak-utah.trycloudflare.com/hls/canal_9/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="canal_10" tvg-logo="https://www.google.com/s2/favicons?domain=dazn.com&sz=512" group-title="Deporte" , DAZN 3 OP 2
+https://certified-garbage-oak-utah.trycloudflare.com/hls/canal_10/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="canal_11" tvg-logo="https://www.google.com/s2/favicons?domain=dazn.com&sz=512" group-title="Deporte" , DAZN 4
+https://certified-garbage-oak-utah.trycloudflare.com/hls/canal_11/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="canal_12" tvg-logo="https://www.google.com/s2/favicons?domain=dazn.com&sz=512" group-title="Deporte" , DAZN F1
+https://certified-garbage-oak-utah.trycloudflare.com/hls/canal_12/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="canal_13" tvg-logo="https://www.google.com/s2/favicons?domain=dazn.com&sz=512" group-title="Deporte" , DAZN F1 FHD
+https://certified-garbage-oak-utah.trycloudflare.com/hls/canal_13/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="canal_14" tvg-logo="https://www.google.com/s2/favicons?domain=dazn.com&sz=512" group-title="Deporte" , DAZN F1 4K
+https://certified-garbage-oak-utah.trycloudflare.com/hls/canal_14/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="canal_15" tvg-logo="https://www.google.com/s2/favicons?domain=dazn.com&sz=512" group-title="Deporte" , DAZN F1 OP 2
+https://certified-garbage-oak-utah.trycloudflare.com/hls/canal_15/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="canal_16" tvg-logo="https://www.google.com/s2/favicons?domain=dazn.com&sz=512" group-title="Deporte" , DAZN F1 OP 3
+https://certified-garbage-oak-utah.trycloudflare.com/hls/canal_16/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="canal_17" tvg-logo="https://www.google.com/s2/favicons?domain=dazn.com&sz=512" group-title="Deporte" , DAZN F1 OP 4
+https://certified-garbage-oak-utah.trycloudflare.com/hls/canal_17/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="canal_18" tvg-logo="https://www.google.com/s2/favicons?domain=dazn.com&sz=512" group-title="Deporte" , DAZN F1 OP 5
+https://certified-garbage-oak-utah.trycloudflare.com/hls/canal_18/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="canal_19" tvg-logo="https://www.google.com/s2/favicons?domain=laliga.com&sz=512" group-title="Deporte" , DAZN LA LIGA FHD
+https://certified-garbage-oak-utah.trycloudflare.com/hls/canal_19/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="canal_20" tvg-logo="https://www.google.com/s2/favicons?domain=laliga.com&sz=512" group-title="Deporte" , DAZN LA LIGA
+https://certified-garbage-oak-utah.trycloudflare.com/hls/canal_20/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="canal_21" tvg-logo="https://www.google.com/s2/favicons?domain=laliga.com&sz=512" group-title="Deporte" , DAZN LA LIGA OP 2
+https://certified-garbage-oak-utah.trycloudflare.com/hls/canal_21/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="canal_22" tvg-logo="https://www.google.com/s2/favicons?domain=laliga.com&sz=512" group-title="Deporte" , DAZN LA LIGA 2
+https://certified-garbage-oak-utah.trycloudflare.com/hls/canal_22/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="canal_23" tvg-logo="https://www.google.com/s2/favicons?domain=movistarplus.es&sz=512" group-title="Deporte" , M LALIGA
+https://certified-garbage-oak-utah.trycloudflare.com/hls/canal_23/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="canal_24" tvg-logo="https://www.google.com/s2/favicons?domain=movistarplus.es&sz=512" group-title="Deporte" , M LALIGA FHD
+https://certified-garbage-oak-utah.trycloudflare.com/hls/canal_24/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="canal_25" tvg-logo="https://www.google.com/s2/favicons?domain=movistarplus.es&sz=512" group-title="Deporte" , M LIGA OP 2
+https://certified-garbage-oak-utah.trycloudflare.com/hls/canal_25/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="canal_26" tvg-logo="https://www.google.com/s2/favicons?domain=movistarplus.es&sz=512" group-title="Deporte" , M LALIGA OP 3
+https://certified-garbage-oak-utah.trycloudflare.com/hls/canal_26/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="canal_27" tvg-logo="https://www.google.com/s2/favicons?domain=movistarplus.es&sz=512" group-title="Deporte" , M LALIGA OP 4
+https://certified-garbage-oak-utah.trycloudflare.com/hls/canal_27/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="canal_28" tvg-logo="https://www.google.com/s2/favicons?domain=movistarplus.es&sz=512" group-title="Deporte" , M LALIGA 2
+https://certified-garbage-oak-utah.trycloudflare.com/hls/canal_28/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="canal_29" tvg-logo="https://www.google.com/s2/favicons?domain=movistarplus.es&sz=512" group-title="Deporte" , M LALIGA 2 FHD
+https://certified-garbage-oak-utah.trycloudflare.com/hls/canal_29/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="canal_30" tvg-logo="https://www.google.com/s2/favicons?domain=movistarplus.es&sz=512" group-title="Deporte" , M LALIGA 3
+https://certified-garbage-oak-utah.trycloudflare.com/hls/canal_30/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="canal_31" tvg-logo="https://www.google.com/s2/favicons?domain=movistarplus.es&sz=512" group-title="Deporte" , M LALIGA 3 FHD
+https://certified-garbage-oak-utah.trycloudflare.com/hls/canal_31/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="canal_32" tvg-logo="https://www.google.com/s2/favicons?domain=movistarplus.es&sz=512" group-title="Deporte" , M LALIGA 4
+https://certified-garbage-oak-utah.trycloudflare.com/hls/canal_32/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="canal_33" tvg-logo="https://www.google.com/s2/favicons?domain=uefa.com&sz=512" group-title="Deporte" , M LALIGA CAMPEONES
+https://certified-garbage-oak-utah.trycloudflare.com/hls/canal_33/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="canal_34" tvg-logo="https://www.google.com/s2/favicons?domain=uefa.com&sz=512" group-title="Deporte" , M LALIGA CAMPEONES FHD
+https://certified-garbage-oak-utah.trycloudflare.com/hls/canal_34/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="canal_35" tvg-logo="https://www.google.com/s2/favicons?domain=uefa.com&sz=512" group-title="Deporte" , M LALIGA CAMPEONES 4K
+https://certified-garbage-oak-utah.trycloudflare.com/hls/canal_35/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="canal_36" tvg-logo="https://www.google.com/s2/favicons?domain=uefa.com&sz=512" group-title="Deporte" , M LALIGA CAMPEONES OP 2
+https://certified-garbage-oak-utah.trycloudflare.com/hls/canal_36/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="canal_37" tvg-logo="https://www.google.com/s2/favicons?domain=uefa.com&sz=512" group-title="Deporte" , M LALIGA CAMPEONES OP 3
+https://certified-garbage-oak-utah.trycloudflare.com/hls/canal_37/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="canal_38" tvg-logo="https://www.google.com/s2/favicons?domain=uefa.com&sz=512" group-title="Deporte" , M LALIGA CAMPEONES OP 4
+https://certified-garbage-oak-utah.trycloudflare.com/hls/canal_38/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="canal_39" tvg-logo="https://www.google.com/s2/favicons?domain=uefa.com&sz=512" group-title="Deporte" , M LALIGA CAMPEONES 2
+https://certified-garbage-oak-utah.trycloudflare.com/hls/canal_39/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="canal_40" tvg-logo="https://www.google.com/s2/favicons?domain=uefa.com&sz=512" group-title="Deporte" , M LALIGA CAMPEONES 2 FHD
+https://certified-garbage-oak-utah.trycloudflare.com/hls/canal_40/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="canal_41" tvg-logo="https://www.google.com/s2/favicons?domain=uefa.com&sz=512" group-title="Deporte" , M LALIGA CAMPEONES 3
+https://certified-garbage-oak-utah.trycloudflare.com/hls/canal_41/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="canal_42" tvg-logo="https://www.google.com/s2/favicons?domain=uefa.com&sz=512" group-title="Deporte" , M LALIGA CAMPEONES 3 FHD
+https://certified-garbage-oak-utah.trycloudflare.com/hls/canal_42/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="canal_43" tvg-logo="https://www.google.com/s2/favicons?domain=uefa.com&sz=512" group-title="Deporte" , M LALIGA CAMPEONES 4
+https://certified-garbage-oak-utah.trycloudflare.com/hls/canal_43/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="canal_44" tvg-logo="https://www.google.com/s2/favicons?domain=uefa.com&sz=512" group-title="Deporte" , M LALIGA CAMPEONES 4 FHD
+https://certified-garbage-oak-utah.trycloudflare.com/hls/canal_44/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="canal_45" tvg-logo="https://www.google.com/s2/favicons?domain=uefa.com&sz=512" group-title="Deporte" , M LALIGA CAMPEONES 4 OP 2
+https://certified-garbage-oak-utah.trycloudflare.com/hls/canal_45/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="canal_46" tvg-logo="https://www.google.com/s2/favicons?domain=movistarplus.es&sz=512" group-title="Deporte" , M+ ACCION
+https://certified-garbage-oak-utah.trycloudflare.com/hls/canal_46/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="canal_47" tvg-logo="https://www.google.com/s2/favicons?domain=movistarplus.es&sz=512" group-title="Deporte" , M+ CINE ESPAnOL
+https://certified-garbage-oak-utah.trycloudflare.com/hls/canal_47/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="canal_48" tvg-logo="https://www.google.com/s2/favicons?domain=movistarplus.es&sz=512" group-title="Deporte" , M+ COMEDIA
+https://certified-garbage-oak-utah.trycloudflare.com/hls/canal_48/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="canal_49" tvg-logo="https://www.google.com/s2/favicons?domain=movistarplus.es&sz=512" group-title="Deporte" , M+ DEPORTES
+https://certified-garbage-oak-utah.trycloudflare.com/hls/canal_49/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="canal_50" tvg-logo="https://www.google.com/s2/favicons?domain=movistarplus.es&sz=512" group-title="Deporte" , M+ DEPORTES FHD
+https://certified-garbage-oak-utah.trycloudflare.com/hls/canal_50/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="canal_51" tvg-logo="https://www.google.com/s2/favicons?domain=movistarplus.es&sz=512" group-title="Deporte" , M+ TERROR
+https://certified-garbage-oak-utah.trycloudflare.com/hls/canal_51/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="canal_52" tvg-logo="https://www.google.com/s2/favicons?domain=movistarplus.es&sz=512" group-title="Deporte" , M+ PLUS
+https://certified-garbage-oak-utah.trycloudflare.com/hls/canal_52/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="canal_53" tvg-logo="https://www.google.com/s2/favicons?domain=movistarplus.es&sz=512" group-title="Deporte" , M+ PLUS FHD
+https://certified-garbage-oak-utah.trycloudflare.com/hls/canal_53/index.m3u8
 
 
 
