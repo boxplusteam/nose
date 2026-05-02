@@ -3,8 +3,8 @@
 #EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="https://th.bing.com/th/id/OIP.2ZwPgeCqKyslQyj9SnSZAAHaEK?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3" group-title="Deporte" , DAZN F1 
 https://bg622.streamingtv339.com/daznf1/tracks-v1a1/mono.m3u8
 
-#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlO1WfqtVlgVWv-Tpu9HwDfDGF72GRja7hScpBmJKzow&s=10" group-title="Deporte" , M+ La Liga
-
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmGFUo7tobg-NqAb7JO0Whvl0n0chI-UGBLzaaR03fiyoOcb8WZ_uC4Uc&s=10" group-title="Deporte" , UFC PREMIUM 
+https://direct-only-washington-grill.trycloudflare.com/hls/UFC/index.m3u8
 
 #EXTM3U
 #EXTINF:-1 tvg-id="" tvg-name="canal_1" tvg-logo="https://www.google.com/s2/favicons?domain=dazn.com&sz=512" group-title="Deporte" , DAZN 1
