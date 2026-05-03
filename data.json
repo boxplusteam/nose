@@ -7,32 +7,7 @@
        },
 
         
-        "dzn": {
-          "nombre": "DAZN 1",
-            "url": "http://127.0.0.1:6878/ace/getstream?id=50a8a13c474848d1efbd5586efdb5b6cdd173fa9&pid=32538"
-        },
-        
-         "f14k": {
-            "nombre": "DAZN F1 4k",
-            "url": "http://127.0.0.1:6878/ace/getstream?id=d65257bb934b73647374224fd62d836815804be2&pid=40669"
-        },
-
-        "mla": {
-            "nombre": "Mlaliga",
-            "url": "http://127.0.0.1:6878/ace/getstream?id=31c19ffb3472c289c5bbbbc174449c8ed0d19e38&pid=38053"
-        },
-
-        "dzla": {
-            "nombre": "DAZN LALIGA",
-            "url": "http://127.0.0.1:6878/ace/getstream?id=dda5d2cace9bc4cb0918e62bc50d657d4a10496a&pid=41851"
-        },
-
-        "mlac": {
-            "nombre": "M+ LA LIGA CAMPEONES",
-            "url": "http://127.0.0.1:6878/ace/getstream?id=e572a5178ff72eed7d1d751a18b4b3419699f370&pid=38610"
-        },
-
-
+   {
   "canal_1": {
     "nombre": "DAZN 1",
     "url": "http://127.0.0.1:6878/ace/getstream?id=d5b2c6b940cf3df5e8f9dc6f000f0ea23a10b151"
@@ -214,39 +189,41 @@
     "url": "http://127.0.0.1:6878/ace/getstream?id=53cd86466d1faed03a607be92af601f7e8da128f"
   },
   "canal_46": {
-    "nombre": "M+ ACCION",
-    "url": "http://127.0.0.1:6878/ace/getstream?id=2fb689d18a62b52dac5a4a39b013b7d9ba296751"
-  },
-  "canal_47": {
-    "nombre": "M+ CINE ESPAnOL",
-    "url": "http://127.0.0.1:6878/ace/getstream?id=dc044c79fcde8ed69ed4c878643b09f09e7ccb72"
-  },
-  "canal_48": {
-    "nombre": "M+ COMEDIA",
-    "url": "http://127.0.0.1:6878/ace/getstream?id=b5b4cf132f1c655ed2f0aaa759a6012db140740a"
-  },
-  "canal_49": {
     "nombre": "M+ DEPORTES",
     "url": "http://127.0.0.1:6878/ace/getstream?id=6e212a916c83638268047dd2757c95b14f7d25a3"
   },
-  "canal_50": {
+  "canal_47": {
     "nombre": "M+ DEPORTES FHD",
     "url": "http://127.0.0.1:6878/ace/getstream?id=edd06f11e1cef292a1d795e15207ef2f580e298c"
   },
+  "canal_48": {
+    "nombre": "CAZA Y PESCA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=8b9e46eb3a9b4ef23b7d3d86c73a0851580f8caa"
+  },
+  "canal_49": {
+    "nombre": "M+ ACCION",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=2fb689d18a62b52dac5a4a39b013b7d9ba296751"
+  },
+  "canal_50": {
+    "nombre": "M+ CINE ESPAnOL",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=dc044c79fcde8ed69ed4c878643b09f09e7ccb72"
+  },
   "canal_51": {
+    "nombre": "M+ COMEDIA",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=b5b4cf132f1c655ed2f0aaa759a6012db140740a"
+  },
+  "canal_52": {
     "nombre": "M+ TERROR",
     "url": "http://127.0.0.1:6878/ace/getstream?id=b331dcd389eaf6d4af356245cc0a02a3c478d3ed"
   },
-  "canal_52": {
+  "canal_53": {
     "nombre": "M+ PLUS",
     "url": "http://127.0.0.1:6878/ace/getstream?id=b6ffbbc72a5b6b579faf79ebac229af7a25b933b"
   },
-  "canal_53": {
+  "canal_54": {
     "nombre": "M+ PLUS FHD",
     "url": "http://127.0.0.1:6878/ace/getstream?id=8c67cdb5ba81976662c3a67984a9545d9cfb0f70"
   }
 
-
-       
     }
 }
