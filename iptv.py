@@ -104,19 +104,23 @@ def lanzar_ffmpeg(cid, info):
 
     # Comando optimizado para streaming estable
     cmd = [
-    "ffmpeg", "-hide_banner", "-y",
-    "-reconnect", "1", 
-    "-reconnect_at_eof", "1", 
-    "-reconnect_streamed", "1", 
-    "-reconnect_delay_max", "5",
-    "-i", url,
-    "-c:v", "copy", 
-    "-c:a", "copy",
-    "-f", "hls", 
-    "-hls_time", "6", 
-    "-hls_list_size", "9",
-    "-hls_flags", "delete_segments+append_list+discont_start",
-    output
+"ffmpeg", "-hide_banner", "-y",
+"-loglevel", "error",
+"-reconnect", "1", 
+"-reconnect_at_eof", "1", 
+"-reconnect_streamed", "1", 
+"-reconnect_delay_max", "10", // Aumentamos a 10 para dar más tiempo
+"-probesize", "10M",          // Analiza más datos antes de empezar
+"-analyzeduration", "10M", 
+"-i", url,
+"-c:v", "copy", 
+"-c:a", "copy",
+"-f", "hls", 
+"-hls_time", "4",             // Segmentos un poco más cortos para rotar más rápido
+"-hls_list_size", "10",       // Lista más larga para que el reproductor tenga buffer
+"-hls_flags", "delete_segments+append_list+discont_start",
+"-hls_segment_type", "mpegts", // Asegura compatibilidad máxima
+output
     ]
     try:
         si = subprocess.STARTUPINFO()
