@@ -108,7 +108,7 @@ def lanzar_ffmpeg(cid, info):
         "-reconnect", "1", "-reconnect_at_eof", "1", "-reconnect_streamed", "1", "-reconnect_delay_max", "5",
         "-i", url,
         "-c:v", "copy", "-c:a", "copy",
-        "-f", "hls", "-hls_time", "9", "-hls_list_size", "20",
+        "-f", "hls", "-hls_time", "6", "-hls_list_size", "9",
         "-hls_flags", "delete_segments+append_list+discont_start",
         output
     ]
