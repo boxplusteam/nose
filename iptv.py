@@ -104,13 +104,19 @@ def lanzar_ffmpeg(cid, info):
 
     # Comando optimizado para streaming estable
     cmd = [
-        "ffmpeg", "-hide_banner", "-y",
-        "-reconnect", "1", "-reconnect_at_eof", "1", "-reconnect_streamed", "1", "-reconnect_delay_max", "5",
-        "-i", url,
-        "-c:v", "copy", "-c:a", "copy",
-        "-f", "hls", "-hls_time", "6", "-hls_list_size", "9",
-        "-hls_flags", "delete_segments+append_list+discont_start",
-        output
+    "ffmpeg", "-hide_banner", "-y",
+    "-reconnect", "1", 
+    "-reconnect_at_eof", "1", 
+    "-reconnect_streamed", "1", 
+    "-reconnect_delay_max", "5",
+    "-i", url,
+    "-c:v", "copy", 
+    "-c:a", "copy",
+    "-f", "hls", 
+    "-hls_time", "6", 
+    "-hls_list_size", "9",
+    "-hls_flags", "delete_segments+append_list+discont_start",
+    output
     ]
     try:
         si = subprocess.STARTUPINFO()
