@@ -11,7 +11,7 @@ from http.server import SimpleHTTPRequestHandler, HTTPServer, ThreadingHTTPServe
 # --- CONFIGURACIÓN ---
 JSON_URL = "https://raw.githubusercontent.com/boxplusteam/nose/refs/heads/main/data.json"
 BASE_PATH = r"D:\hls"
-PUERTO_HTTP = 80  # Cambia a 8000 si prefieres ese puerto
+PUERTO_HTTP = 80 
 
 if not os.path.exists(BASE_PATH):
     os.makedirs(BASE_PATH, exist_ok=True)
@@ -30,7 +30,6 @@ datos_actuales_ram = None
 ultima_actividad = {}
 
 class OnDemandHandler(SimpleHTTPRequestHandler):
-    # Definimos los tipos de archivo correctamente para que los reproductores no den error
     extensions_map = SimpleHTTPRequestHandler.extensions_map.copy()
     extensions_map.update({
         '.m3u8': 'application/x-mpegURL',
@@ -38,16 +37,14 @@ class OnDemandHandler(SimpleHTTPRequestHandler):
     })
 
     def end_headers(self):
-        # CORS para que funcione en cualquier web player
         self.send_header('Access-Control-Allow-Origin', '*')
         self.send_header('Access-Control-Allow-Methods', 'GET, OPTIONS')
         self.send_header('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type, Origin')
         
-        # Lógica de Caché para optimizar el tráfico de red (Estilo Nginx)
         if self.path.endswith(".m3u8"):
             self.send_header('Cache-Control', 'no-cache, no-store, must-revalidate')
         elif self.path.endswith(".ts"):
-            self.send_header('Cache-Control', 'public, max-age=3600') # Cachear segmentos de video
+            self.send_header('Cache-Control', 'public, max-age=3600')
             
         super().end_headers()
 
@@ -63,7 +60,6 @@ class OnDemandHandler(SimpleHTTPRequestHandler):
                 cid = partes[1]
                 ultima_actividad[cid] = time.time()
                 
-                # Si piden el index y no está iniciado el proceso
                 if path.endswith("index.m3u8") and cid not in procesos_activos:
                     if datos_actuales_ram and cid in datos_actuales_ram.get("canales", {}):
                         logging.info(f"🚀 Petición On-Demand: {cid}. Iniciando FFmpeg...")
@@ -71,14 +67,13 @@ class OnDemandHandler(SimpleHTTPRequestHandler):
                         if proc:
                             procesos_activos[cid] = proc
                             archivo_index = os.path.join(BASE_PATH, cid, "index.m3u8")
-                            # Esperar a que FFmpeg genere el primer archivo
+                            # Espera máxima de 15 segundos para no colgar el hilo
                             for _ in range(30):
                                 if os.path.exists(archivo_index): break
                                 time.sleep(0.5)
         try:
             return super().do_GET()
         except (ConnectionResetError, BrokenPipeError):
-            # Ignorar errores comunes cuando un cliente cierra el reproductor rápido
             pass
         except Exception as e:
             logging.error(f"Error sirviendo archivo: {e}")
@@ -91,44 +86,50 @@ class OnDemandHandler(SimpleHTTPRequestHandler):
         return ""
 
     def log_message(self, format, *args):
-        # Desactivar logs de cada petición .ts para no saturar la consola
         pass
 
 def lanzar_ffmpeg(cid, info):
     url = info.get("url")
     if not url: return None
     ruta_hls = os.path.join(BASE_PATH, cid)
-    if os.path.exists(ruta_hls): shutil.rmtree(ruta_hls)
+    
+    # Limpieza de carpeta previa
+    if os.path.exists(ruta_hls):
+        try: shutil.rmtree(ruta_hls)
+        except: pass
+    
     os.makedirs(ruta_hls, exist_ok=True)
     output = os.path.join(ruta_hls, "index.m3u8")
 
-    # Comando optimizado para streaming estable
+    # COMANDO CORREGIDO Y LIMPIO
     cmd = [
-"ffmpeg", "-hide_banner", "-y",
-"-loglevel", "error",
-"-reconnect", "1", 
-"-reconnect_at_eof", "1", 
-"-reconnect_streamed", "1", 
-"-reconnect_delay_max", "10", // Aumentamos a 10 para dar más tiempo
-"-probesize", "10M",          // Analiza más datos antes de empezar
-"-analyzeduration", "10M", 
-"-i", url,
-"-c:v", "copy", 
-"-c:a", "copy",
-"-f", "hls", 
-"-hls_time", "4",             // Segmentos un poco más cortos para rotar más rápido
-"-hls_list_size", "10",       // Lista más larga para que el reproductor tenga buffer
-"-hls_flags", "delete_segments+append_list+discont_start",
-"-hls_segment_type", "mpegts", // Asegura compatibilidad máxima
-output
+        "ffmpeg", "-hide_banner", "-y",
+        "-loglevel", "error",
+        "-reconnect", "1", 
+        "-reconnect_at_eof", "1", 
+        "-reconnect_streamed", "1", 
+        "-reconnect_delay_max", "10",
+        "-probesize", "15M",           # Aumentado para mayor estabilidad inicial
+        "-analyzeduration", "15M", 
+        "-i", url,
+        "-c:v", "copy", 
+        "-c:a", "copy",
+        "-f", "hls", 
+        "-hls_time", "4", 
+        "-hls_list_size", "10", 
+        "-hls_flags", "delete_segments+append_list+discont_start",
+        "-hls_segment_type", "mpegts",
+        output
     ]
+    
     try:
+        # Esto oculta la ventana de consola si estás en Windows
         si = subprocess.STARTUPINFO()
         si.dwFlags |= subprocess.STARTF_USESHOWWINDOW
-        si.wShowWindow = 7 
-        return subprocess.Popen(cmd, creationflags=subprocess.CREATE_NEW_CONSOLE, startupinfo=si)
+        si.wShowWindow = 0 # Oculto completamente
+        return subprocess.Popen(cmd, startupinfo=si)
     except Exception as e:
-        logging.error(f"Error en {cid}: {e}")
+        logging.error(f"Error lanzando FFmpeg en {cid}: {e}")
         return None
 
 def escanear_url():
@@ -139,7 +140,6 @@ def escanear_url():
     except: return None
 
 def servidor_hilo():
-    # El uso de ThreadingHTTPServer permite múltiples conexiones simultáneas
     server_address = ("", PUERTO_HTTP)
     httpd = ThreadingHTTPServer(server_address, OnDemandHandler)
     httpd.serve_forever()
@@ -147,31 +147,28 @@ def servidor_hilo():
 def main():
     global datos_actuales_ram, procesos_activos
     threading.Thread(target=servidor_hilo, daemon=True).start()
-    logging.info(f"=== GESTOR ACTIVO (SIMULANDO NGINX) - PUERTO {PUERTO_HTTP} ===")
+    logging.info(f"=== GESTOR ACTIVO (50MBPS READY) - PUERTO {PUERTO_HTTP} ===")
 
     while True:
         nuevo = escanear_url()
         
         if nuevo and nuevo != datos_actuales_ram:
-            logging.info("♻️ Cambio detectado en JSON. Reseteando sistema...")
-            for cid in list(procesos_activos.keys()):
-                try: procesos_activos[cid].kill()
-                except: pass
-            
-            procesos_activos.clear()
-            ultima_actividad.clear()
+            logging.info("♻️ Cambio detectado en JSON. Reseteando...")
             datos_actuales_ram = nuevo
 
         ahora = time.time()
         for cid in list(procesos_activos.keys()):
-            # Aumentado a 60 segundos el tiempo de gracia
+            # Tiempo de gracia de 60 segundos antes de apagar el canal
             if ahora - ultima_actividad.get(cid, 0) > 60:
-                logging.info(f"⏹ Inactividad en {cid}. Cerrando.")
-                procesos_activos[cid].kill()
+                logging.info(f"⏹ Cerrando {cid} por inactividad.")
+                procesos_activos[cid].terminate() # terminate es más suave que kill
                 del procesos_activos[cid]
+                # Pequeña pausa antes de borrar archivos para evitar errores de acceso
+                time.sleep(1)
                 try: shutil.rmtree(os.path.join(BASE_PATH, cid))
                 except: pass
             elif procesos_activos[cid].poll() is not None:
+                logging.warning(f"⚠️ El proceso FFmpeg para {cid} se cerró inesperadamente.")
                 del procesos_activos[cid]
         
         time.sleep(5)
