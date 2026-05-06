@@ -1,17 +1,15 @@
 #EXTM3U
 
-#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="https://th.bing.com/th/id/OIP.2ZwPgeCqKyslQyj9SnSZAAHaEK?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3" group-title="Deporte" , DAZN F1 
-https://bg622.streamingtv339.com/daznf1/tracks-v1a1/mono.m3u8
 
 
 
-
-#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="https://th.bing.com/th/id/OIP.2ZwPgeCqKyslQyj9SnSZAAHaEK?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3" group-title="Deporte" , DAZN F1 
-https://bg622.streamingtv339.com/daznf1/tracks-v1a1/mono.m3u8
 
 
 
 #EXTM3U
+
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="https://th.bing.com/th/id/OIP.2ZwPgeCqKyslQyj9SnSZAAHaEK?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3" group-title="Deporte" , DAZN F1 
+https://bg622.streamingtv339.com/daznf1/tracks-v1a1/mono.m3u8
 
 #EXTINF:-1 tvg-logo="https://tse3.mm.bing.net/th/id/OIP.fM6koi0lm36hvb01VvG3QwHaEK?rs=1&pid=ImgDetMain&o=7&rm=3" group-title="Deporte",DAZN 1
 http://100.123.149.127/hls/canal_1/index.m3u8

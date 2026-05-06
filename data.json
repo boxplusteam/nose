@@ -1,7 +1,7 @@
 {
     "canales": {
 
-      "canal_1": {
+  "canal_1": {
     "nombre": "#EXTINF:-1 tvg-logo=\"https://tse3.mm.bing.net/th/id/OIP.fM6koi0lm36hvb01VvG3QwHaEK?rs=1&pid=ImgDetMain&o=7&rm=3\",DAZN 1",
     "url": "http://127.0.0.1:6878/ace/getstream?id=d5b2c6b940cf3df5e8f9dc6f000f0ea23a10b151"
   },
