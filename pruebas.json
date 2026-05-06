@@ -1,6 +1,29 @@
 [
 
-  
+  {
+  "title": "Reacher",
+  "original_title": "Reacher",
+  "year": 2022,
+  "genre": [
+    "Acción",
+    "Crimen",
+    "Drama"
+  ],
+  "studio": "Amazon MGM Studios",
+  "coverImage": "https://tse1.mm.bing.net/th/id/OIP.oMynk0NMdmhPFbPjvAD-lQHaKk?rs=1&pid=ImgDetMain&o=7&rm=3",
+  "description": "Jack Reacher, un veterano investigador de la policía militar que acaba de recuperar su libertad, es arrestado por un asesinato que no cometió y termina en medio de una conspiración mortal.",
+  "episodes": [
+    { "episode": 1, "title": "Reacher T1 - Capítulo 1", "video_url": "https://archive.org/download/PaixaoFlix-Reacher-1-Temporada/Reacher%20S01E01.mkv" },
+    { "episode": 2, "title": "Reacher T1 - Capítulo 2", "video_url": "https://archive.org/download/PaixaoFlix-Reacher-1-Temporada/Reacher%20S01E02.mkv" },
+    { "episode": 3, "title": "Reacher T1 - Capítulo 3", "video_url": "https://archive.org/download/PaixaoFlix-Reacher-1-Temporada/Reacher%20S01E03.mkv" },
+    { "episode": 4, "title": "Reacher T1 - Capítulo 4", "video_url": "https://archive.org/download/PaixaoFlix-Reacher-1-Temporada/Reacher%20S01E04.mkv" },
+    { "episode": 5, "title": "Reacher T1 - Capítulo 5", "video_url": "https://archive.org/download/PaixaoFlix-Reacher-1-Temporada/Reacher%20S01E05.mkv" },
+    { "episode": 6, "title": "Reacher T1 - Capítulo 6", "video_url": "https://archive.org/download/PaixaoFlix-Reacher-1-Temporada/Reacher%20S01E06.mkv" },
+    { "episode": 7, "title": "Reacher T1 - Capítulo 7", "video_url": "https://archive.org/download/PaixaoFlix-Reacher-1-Temporada/Reacher%20S01E07.mkv" },
+    { "episode": 8, "title": "Reacher T1 - Capítulo 8", "video_url": "https://archive.org/download/PaixaoFlix-Reacher-1-Temporada/Reacher%20S01E08.mkv" }
+  ]
+},
+
   {
     "title": "¡ Que viva México ! (2022)",
     "description": "Sin descripción disponible.",
