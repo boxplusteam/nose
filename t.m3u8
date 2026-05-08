@@ -1,3 +1,126 @@
+
+#EXTM3U
+
+#EXTINF:-1 tvg-name="DAZN 1" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/1/17/DAZN_logo.svg" group-title="DAZN",DAZN 1
+http://192.168.18.6:8080/dazn_1/index.m3u8
+
+#EXTINF:-1 tvg-name="DAZN 1 FHD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/1/17/DAZN_logo.svg" group-title="DAZN",DAZN 1 FHD
+http://192.168.18.6:8080/dazn_1_fhd/index.m3u8
+
+#EXTINF:-1 tvg-name="DAZN 1 OP 2" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/1/17/DAZN_logo.svg" group-title="DAZN",DAZN 1 OP 2
+http://192.168.18.6:8080/dazn_1_op2/index.m3u8
+
+#EXTINF:-1 tvg-name="DAZN 1 OP 3" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/1/17/DAZN_logo.svg" group-title="DAZN",DAZN 1 OP 3
+http://192.168.18.6:8080/dazn_1_op3/index.m3u8
+
+#EXTINF:-1 tvg-name="DAZN 2" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/1/17/DAZN_logo.svg" group-title="DAZN",DAZN 2
+http://192.168.18.6:8080/dazn_2/index.m3u8
+
+#EXTINF:-1 tvg-name="DAZN 2 FHD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/1/17/DAZN_logo.svg" group-title="DAZN",DAZN 2 FHD
+http://192.168.18.6:8080/dazn_2_fhd/index.m3u8
+
+#EXTINF:-1 tvg-name="DAZN 2 OP 2" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/1/17/DAZN_logo.svg" group-title="DAZN",DAZN 2 OP 2
+http://192.168.18.6:8080/dazn_2_op2/index.m3u8
+
+#EXTINF:-1 tvg-name="DAZN 3" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/1/17/DAZN_logo.svg" group-title="DAZN",DAZN 3
+http://192.168.18.6:8080/dazn_3/index.m3u8
+
+#EXTINF:-1 tvg-name="DAZN 3 FHD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/1/17/DAZN_logo.svg" group-title="DAZN",DAZN 3 FHD
+http://192.168.18.6:8080/dazn_3_fhd/index.m3u8
+
+#EXTINF:-1 tvg-name="DAZN 3 OP 2" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/1/17/DAZN_logo.svg" group-title="DAZN",DAZN 3 OP 2
+http://192.168.18.6:8080/dazn_3_op2/index.m3u8
+
+#EXTINF:-1 tvg-name="DAZN 4" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/1/17/DAZN_logo.svg" group-title="DAZN",DAZN 4
+http://192.168.18.6:8080/dazn_4/index.m3u8
+
+#EXTINF:-1 tvg-name="DAZN F1" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/8/8f/DAZN_F1_logo.svg" group-title="Motor",DAZN F1
+http://192.168.18.6:8080/dazn_f1/index.m3u8
+
+#EXTINF:-1 tvg-name="DAZN F1 FHD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/8/8f/DAZN_F1_logo.svg" group-title="Motor",DAZN F1 FHD
+http://192.168.18.6:8080/dazn_f1_fhd/index.m3u8
+
+#EXTINF:-1 tvg-name="DAZN F1 4K" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/8/8f/DAZN_F1_logo.svg" group-title="Motor",DAZN F1 4K
+http://192.168.18.6:8080/dazn_f1_4k/index.m3u8
+
+#EXTINF:-1 tvg-name="DAZN F1 OP 2" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/8/8f/DAZN_F1_logo.svg" group-title="Motor",DAZN F1 OP 2
+http://192.168.18.6:8080/dazn_f1_op2/index.m3u8
+
+#EXTINF:-1 tvg-name="DAZN F1 OP 3" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/8/8f/DAZN_F1_logo.svg" group-title="Motor",DAZN F1 OP 3
+http://192.168.18.6:8080/dazn_f1_op3/index.m3u8
+
+#EXTINF:-1 tvg-name="DAZN F1 OP 4" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/8/8f/DAZN_F1_logo.svg" group-title="Motor",DAZN F1 OP 4
+http://192.168.18.6:8080/dazn_f1_op4/index.m3u8
+
+#EXTINF:-1 tvg-name="DAZN F1 OP 5" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/8/8f/DAZN_F1_logo.svg" group-title="Motor",DAZN F1 OP 5
+http://192.168.18.6:8080/dazn_f1_op5/index.m3u8
+
+#EXTINF:-1 tvg-name="DAZN LaLiga" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f8/DAZN_LaLiga_logo.svg" group-title="Fútbol",DAZN LA LIGA
+http://192.168.18.6:8080/dazn_laliga/index.m3u8
+
+#EXTINF:-1 tvg-name="DAZN LaLiga FHD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f8/DAZN_LaLiga_logo.svg" group-title="Fútbol",DAZN LA LIGA FHD
+http://192.168.18.6:8080/dazn_laliga_fhd/index.m3u8
+
+#EXTINF:-1 tvg-name="DAZN LaLiga 2" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f8/DAZN_LaLiga_logo.svg" group-title="Fútbol",DAZN LA LIGA 2
+http://192.168.18.6:8080/dazn_laliga_2/index.m3u8
+
+#EXTINF:-1 tvg-name="DAZN LaLiga OP 2" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f8/DAZN_LaLiga_logo.svg" group-title="Fútbol",DAZN LA LIGA OP 2
+http://192.168.18.6:8080/dazn_laliga_op2/index.m3u8
+
+#EXTINF:-1 group-title="Movistar",M LALIGA
+http://192.168.18.6:8080/m_laliga/index.m3u8
+
+#EXTINF:-1 group-title="Movistar",M LALIGA FHD
+http://192.168.18.6:8080/m_laliga_fhd/index.m3u8
+
+#EXTINF:-1 group-title="Movistar",M LALIGA 2
+http://192.168.18.6:8080/m_laliga_2/index.m3u8
+
+#EXTINF:-1 group-title="Movistar",M LALIGA 3
+http://192.168.18.6:8080/m_laliga_3/index.m3u8
+
+#EXTINF:-1 group-title="Movistar",M LALIGA 4
+http://192.168.18.6:8080/m_laliga_4/index.m3u8
+
+#EXTINF:-1 group-title="Movistar",M LALIGA CAMPEONES
+http://192.168.18.6:8080/m_laliga_campeones/index.m3u8
+
+#EXTINF:-1 group-title="Movistar",M LALIGA CAMPEONES 4K
+http://192.168.18.6:8080/m_laliga_campeones_4k/index.m3u8
+
+#EXTINF:-1 group-title="Movistar",M LALIGA CAMPEONES 2
+http://192.168.18.6:8080/m_laliga_campeones_2/index.m3u8
+
+#EXTINF:-1 group-title="Movistar",M LALIGA CAMPEONES 3
+http://192.168.18.6:8080/m_laliga_campeones_3/index.m3u8
+
+#EXTINF:-1 group-title="Movistar",M LALIGA CAMPEONES 4
+http://192.168.18.6:8080/m_laliga_campeones_4/index.m3u8
+
+#EXTINF:-1 group-title="Movistar",M+ PLUS
+http://192.168.18.6:8080/m_plus/index.m3u8
+
+#EXTINF:-1 group-title="Movistar",M+ DEPORTES
+http://192.168.18.6:8080/m_deportes/index.m3u8
+
+#EXTINF:-1 group-title="Movistar",M+ ACCION
+http://192.168.18.6:8080/m_accion/index.m3u8
+
+#EXTINF:-1 group-title="Movistar",M+ COMEDIA
+http://192.168.18.6:8080/m_comedia/index.m3u8
+
+#EXTINF:-1 group-title="Movistar",M+ TERROR
+http://192.168.18.6:8080/m_terror/index.m3u8
+
+#EXTINF:-1 group-title="Documentales",CAZA Y PESCA
+http://192.168.18.6:8080/caza_y_pesca/index.m3u8
+
+
+
+
+
+
+
 #EXTM3U
 #EXTM3U
 
