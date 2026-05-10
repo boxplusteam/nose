@@ -1,5 +1,28 @@
 {
   "canales": {
+    {
+    
+  
+  "onetoro": {
+    "nombre": "OneToro",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=889db6c87a28fd5b3092333b63bcdddf05d26216"
+  },
+  "motogp": {
+    "nombre": "MotoGP",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=11cbb5346d28af0b972e646832f4be23dd39502d"
+  },
+  "motogp_op2": {
+    "nombre": "MotoGP Op 2",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=18b03739d660f0066364343e226e437bf2555d56"
+  },
+  "liga_hypermotion": {
+    "nombre": "Liga Hypermotion",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=c457b5614df986a6e6a24ffd9547964820ca65fb"
+  },
+  "liga_hypermotion_op2": {
+    "nombre": "Liga Hypermotion Op 2",
+    "url": "http://127.0.0.1:6878/ace/getstream?id=58b1c4b8cb65d648505b035a04e879672fcd8e3f"
+  },
     "golf": {
       "nombre": "M+ Golf",
       "url": "http://127.0.0.1:6878/ace/getstream?id=8546cff89e4ee8bf3ad31cf6457c3bc2c4341031&pid=3650"
