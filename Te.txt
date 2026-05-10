@@ -7,15 +7,16 @@ const axios = require('axios');
 const app = express();
 
 const PORT = 8080;
-const RAM_DISK = 'D:/HLS_LIVE';
+const RAM_DISK = 'D:/HLS_LIVE'; // Tu disco RAM (súper rápido)
 const JSON_URL = 'https://raw.githubusercontent.com/boxplusteam/nose/refs/heads/main/data.json';
 
-// AJUSTES PARA CPU DÉBIL
+// AJUSTES
 const MAX_CANALES = 5;
 const INACTIVIDAD_MS = 30000;
 
 const canalesActivos = new Map();
 
+// Crear carpeta en RAM Disk si no existe
 if (!fs.existsSync(RAM_DISK)) {
     try {
         fs.mkdirSync(RAM_DISK, { recursive: true });
@@ -34,12 +35,12 @@ function eliminarCanal(idCanal) {
 
     log(`🛑 Cerrando canal: ${idCanal}`);
     if (canal.proceso) {
-        // En Windows SIGKILL suele ser más efectivo para limpiar procesos hijos
-        canal.proceso.kill('SIGKILL');
+        canal.proceso.kill('SIGKILL'); // Muerte súbita al proceso para liberar memoria rápido
     }
 
     if (canal.timeout) clearTimeout(canal.timeout);
 
+    // Limpieza de archivos tras un breve retraso
     setTimeout(() => {
         if (canal.folder && fs.existsSync(canal.folder)) {
             try {
@@ -61,14 +62,13 @@ function programarCierrePorInactividad(idCanal) {
     canal.timeout = setTimeout(() => {
         const actual = canalesActivos.get(idCanal);
         if (actual && actual.usuarios.size === 0) {
-            log(`⌛ Canal inactivo: ${idCanal}`);
+            log(`⌛ Canal inactivo: ${idCanal} - Procediendo a cerrar`);
             eliminarCanal(idCanal);
         }
     }, INACTIVIDAD_MS);
 }
 
 async function iniciarCanal(idCanal) {
-    // Si el canal ya está en la lista, devolvemos el objeto existente (REUTILIZACIÓN)
     if (canalesActivos.has(idCanal)) {
         return canalesActivos.get(idCanal);
     }
@@ -92,36 +92,25 @@ async function iniciarCanal(idCanal) {
     const folderPath = path.join(RAM_DISK, idCanal);
     if (!fs.existsSync(folderPath)) fs.mkdirSync(folderPath, { recursive: true });
 
-    log(`🚀 PROCESANDO: ${idCanal} a 560p (CPU Ultra-Low Mode)`);
+    log(`🚀 PROCESANDO: ${idCanal} (Modo Passthrough - CPU 0%)`);
 
-    /**
-     * OPTIMIZACIÓN CPU < 1GHz:
-     * - preset: ultrafast (mínimo uso de CPU)
-     * - crf: 28 (calidad balanceada para ahorrar ciclos)
-     * - scale: -2:560 (fuerza 560p manteniendo aspecto)
-     * - threads: 1 (evita que un solo ffmpeg bloquee todos los núcleos)
-     */
+    // Argumentos ultraligeros: Solo reempaqueta, NO recodifica.
     const args = [
         '-reconnect', '1', '-reconnect_streamed', '1', '-reconnect_at_eof', '1',
         '-i', canalData.url,
-        '-vf', 'scale=-2:560',
-        '-c:v', 'libx264',
-        '-preset', 'ultrafast',
-        '-crf', '28',
-        '-threads', '1', 
-        '-c:a', 'copy', // Audio se copia para no gastar CPU
+        '-c', 'copy', // Esto abarca video (-c:v) y audio (-c:a) al mismo tiempo
         '-f', 'hls',
-        '-hls_time', '6',
-        '-hls_list_size', '5',
+        '-hls_time', '4', // Tramos más cortos = carga más rápida en el reproductor
+        '-hls_list_size', '4',
         '-hls_flags', 'delete_segments',
         path.join(folderPath, 'index.m3u8')
     ];
 
-    // En Windows, usamos 'cmd /c start /low /b' para bajar la prioridad de CPU del proceso
     const ffmpeg = spawn('ffmpeg', args);
 
     ffmpeg.stderr.on('data', (d) => {
-        if (d.toString().includes('Error')) console.log(`[FFMPEG ERR] ${idCanal}:`, d.toString().substring(0, 60));
+        const output = d.toString();
+        if (output.includes('Error')) console.log(`[FFMPEG ERR] ${idCanal}:`, output.substring(0, 60));
     });
 
     const canalObj = {
@@ -134,11 +123,18 @@ async function iniciarCanal(idCanal) {
 
     canalesActivos.set(idCanal, canalObj);
     
-    // Espera inicial para que el primer segmento se genere
-    await new Promise(r => setTimeout(r, 5000));
+    // Esperar 4 segundos (tiempo de un segmento) para asegurar que hay video antes de responder
+    await new Promise(r => setTimeout(r, 4000));
     return canalObj;
 }
 
+// Optimización: CORS Global súper rápido
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    next();
+});
+
+// Ruta para el Playlist (M3U8)
 app.get('/:canal/index.m3u8', async (req, res) => {
     const idCanal = req.params.canal;
     const userId = req.headers['x-user-id'] || req.ip;
@@ -163,7 +159,8 @@ app.get('/:canal/index.m3u8', async (req, res) => {
 
         const file = path.join(RAM_DISK, idCanal, 'index.m3u8');
         if (fs.existsSync(file)) {
-            res.setHeader('Access-Control-Allow-Origin', '*');
+            // EVITAR CACHÉ en M3U8 para que el reproductor siempre pida el más reciente
+            res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
             return res.sendFile(file);
         }
         res.status(503).send("Cargando stream...");
@@ -172,15 +169,17 @@ app.get('/:canal/index.m3u8', async (req, res) => {
     }
 });
 
+// Ruta para los fragmentos de video (TS)
 app.get('/:canal/:segmento.ts', (req, res) => {
     const file = path.join(RAM_DISK, req.params.canal, `${req.params.segmento}.ts`);
     if (fs.existsSync(file)) {
-        res.setHeader('Access-Control-Allow-Origin', '*');
+        // PERMITIR CACHÉ en los segmentos TS, ahorra peticiones al servidor si el usuario retrocede 
+        res.setHeader('Cache-Control', 'public, max-age=3600');
         return res.sendFile(file);
     }
     res.status(404).end();
 });
 
 app.listen(PORT, () => {
-    log(`✅ Servidor en puerto ${PORT} | Modo CPU Económica`);
+    log(`⚡ Servidor TURBO iniciado en el puerto ${PORT} | Modo CPU 0%`);
 });
