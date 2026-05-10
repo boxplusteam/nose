@@ -7,28 +7,25 @@ const axios = require('axios');
 const app = express();
 
 const PORT = 8080;
-const RAM_DISK = 'D:/HLS_LIVE';
+const RAM_DISK = 'D:/HLS_LIVE'; // Carpeta temporal
 const JSON_URL = 'https://raw.githubusercontent.com/boxplusteam/nose/refs/heads/main/data.json';
 
-const MAX_CANALES = 5;
-const INACTIVIDAD_MS = 30000;
+const INACTIVIDAD_MS = 30000; // 30 segundos
 
-// canales activos
+// Canales activos en memoria
 const canalesActivos = new Map();
 
 /*
-Estructura:
-
+Estructura ahora optimizada:
 {
    id,
    proceso,
    folder,
-   usuarios: Set(),
-   timeout
+   ultimaActividad: Date.now() // Timestamp de la última vez que alguien pidió un archivo
 }
 */
 
-// asegurar carpeta
+// Asegurar carpeta
 if (!fs.existsSync(RAM_DISK)) {
     try {
         fs.mkdirSync(RAM_DISK, { recursive: true });
@@ -48,24 +45,18 @@ function eliminarCanal(idCanal) {
 
     log(`🛑 Cerrando canal: ${idCanal}`);
 
-    // matar ffmpeg
+    // Matar ffmpeg
     if (canal.proceso) {
         canal.proceso.kill('SIGKILL');
     }
 
-    // borrar timeout
-    if (canal.timeout) {
-        clearTimeout(canal.timeout);
-    }
-
-    // borrar archivos
+    // Borrar archivos
     if (canal.folder && fs.existsSync(canal.folder)) {
         try {
             fs.rmSync(canal.folder, {
                 recursive: true,
                 force: true
             });
-
             log(`🗑️ Archivos eliminados: ${idCanal}`);
         } catch (err) {
             console.log("⚠️ Error borrando carpeta");
@@ -75,218 +66,148 @@ function eliminarCanal(idCanal) {
     canalesActivos.delete(idCanal);
 }
 
-function programarCierrePorInactividad(idCanal) {
-    const canal = canalesActivos.get(idCanal);
-
-    if (!canal) return;
-
-    // limpiar timeout anterior
-    if (canal.timeout) {
-        clearTimeout(canal.timeout);
-    }
-
-    canal.timeout = setTimeout(() => {
-        const actual = canalesActivos.get(idCanal);
-
-        if (!actual) return;
-
-        // si sigue vacío tras 30 segundos
-        if (actual.usuarios.size === 0) {
-            log(`⌛ Canal inactivo 30 segundos: ${idCanal}`);
-            eliminarCanal(idCanal);
+// -------------------------------------------------------------
+// NUEVO SISTEMA: Bucle global que revisa la inactividad real
+// -------------------------------------------------------------
+setInterval(() => {
+    const ahora = Date.now();
+    for (const [id, canal] of canalesActivos) {
+        // Si han pasado más de 30 segundos sin que nadie pida un archivo (.m3u8 o .ts)
+        if (ahora - canal.ultimaActividad > INACTIVIDAD_MS) {
+            log(`⌛ Canal inactivo por 30s. Cerrando automáticamente: ${id}`);
+            eliminarCanal(id);
         }
-    }, INACTIVIDAD_MS);
-}
-
-function usuarioSaleDelCanal(idCanal, userId) {
-    const canal = canalesActivos.get(idCanal);
-
-    if (!canal) return;
-
-    canal.usuarios.delete(userId);
-
-    log(`👤 Usuario salió de ${idCanal} | usuarios: ${canal.usuarios.size}`);
-
-    // si no queda nadie
-    if (canal.usuarios.size === 0) {
-        programarCierrePorInactividad(idCanal);
     }
-}
+}, 10000); // Revisa todos los canales cada 10 segundos
+
 
 async function iniciarCanal(idCanal) {
 
-    // si ya existe no iniciar otro ffmpeg
+    // Si ya existe (ej. otro usuario entró a la vez), devolvemos el que ya está
     if (canalesActivos.has(idCanal)) {
         return canalesActivos.get(idCanal);
     }
 
-    // si ya hay 5 canales abiertos
-    if (canalesActivos.size >= MAX_CANALES) {
-
-        // buscar uno vacío
-        for (const [id, canal] of canalesActivos) {
-
-            if (canal.usuarios.size === 0) {
-                log(`♻️ Liberando canal vacío: ${id}`);
-                eliminarCanal(id);
-                break;
-            }
-        }
-
-        // si sigue habiendo 5 no dejar abrir más
-        if (canalesActivos.size >= MAX_CANALES) {
-            throw new Error('Limite de canales alcanzado');
-        }
-    }
-
     const { data } = await axios.get(JSON_URL);
-
     const canales = data.canales || data;
-
     const canalData = canales[idCanal];
 
     if (!canalData) {
-        throw new Error('Canal no existe');
+        throw new Error('El canal no existe en el JSON');
     }
 
     const folderPath = path.join(RAM_DISK, idCanal);
 
-    // limpiar por seguridad
+    // Limpiar carpeta por seguridad antes de empezar
     if (fs.existsSync(folderPath)) {
-        fs.rmSync(folderPath, {
-            recursive: true,
-            force: true
-        });
+        fs.rmSync(folderPath, { recursive: true, force: true });
     }
+    fs.mkdirSync(folderPath, { recursive: true });
 
-    fs.mkdirSync(folderPath, {
-        recursive: true
-    });
+    log(`🚀 INICIANDO FFMPEG: ${idCanal}`);
 
-    log(`🚀 INICIANDO: ${idCanal}`);
-
+    // Flags optimizados para evitar que FFmpeg se cuelgue si la fuente falla
     const ffmpeg = spawn('ffmpeg', [
         '-reconnect', '1',
         '-reconnect_streamed', '1',
         '-reconnect_at_eof', '1',
-
+        '-reconnect_delay_max', '5', // Evita que se quede pillado intentando reconectar
+        
         '-i', canalData.url,
-
         '-c', 'copy',
-
         '-f', 'hls',
-
         '-hls_time', '6',
         '-hls_list_size', '9',
-
-        '-hls_flags', 'delete_segments',
-
+        '-hls_flags', 'delete_segments+append_list', // Mejor manejo del disco
+        
         path.join(folderPath, 'index.m3u8')
     ]);
 
     ffmpeg.stderr.on('data', (data) => {
-
         const txt = data.toString();
-
-        if (txt.includes('Error')) {
-            console.log(`[FFmpeg] ${txt.split('\n')[0]}`);
+        // Filtramos para ver solo errores graves en consola y no saturarla
+        if (txt.toLowerCase().includes('error') || txt.toLowerCase().includes('fatal')) {
+            console.log(`[FFmpeg - ${idCanal}] ${txt.split('\n')[0]}`);
         }
     });
 
     ffmpeg.on('close', () => {
-        log(`❌ FFmpeg cerrado: ${idCanal}`);
+        log(`❌ FFmpeg cerrado o caído: ${idCanal}`);
+        // Si se cae por un error externo, lo eliminamos de la lista para que 
+        // el próximo usuario que entre fuerce un reinicio limpio
+        if (canalesActivos.has(idCanal)) {
+            eliminarCanal(idCanal);
+        }
     });
 
     const canalObj = {
         id: idCanal,
         proceso: ffmpeg,
         folder: folderPath,
-        usuarios: new Set(),
-        timeout: null
+        ultimaActividad: Date.now() // Inicializamos el contador
     };
 
     canalesActivos.set(idCanal, canalObj);
 
-    // esperar creación m3u8
-    await new Promise(r => setTimeout(r, 4000));
+    // -------------------------------------------------------------
+    // OPTIMIZACIÓN: Esperar de forma inteligente al index.m3u8
+    // -------------------------------------------------------------
+    const m3u8Path = path.join(folderPath, 'index.m3u8');
+    let intentos = 0;
+    
+    // Revisa cada medio segundo si el archivo ya existe (máximo 10 segundos)
+    while (!fs.existsSync(m3u8Path) && intentos < 20) {
+        await new Promise(r => setTimeout(r, 500));
+        intentos++;
+    }
 
     return canalObj;
 }
 
-/*
-HEADER OBLIGATORIO:
-
-x-user-id: ID_UNICO
-
-Ejemplo:
-x-user-id: pepe123
-*/
+// -------------------------------------------------------------
+// RUTAS EXPRESS
+// -------------------------------------------------------------
 
 app.get('/:canal/index.m3u8', async (req, res) => {
-
     const idCanal = req.params.canal;
 
-    const userId =
-        req.headers['x-user-id'] ||
-        req.ip;
-
     try {
-
         let canal = canalesActivos.get(idCanal);
 
-        // iniciar si no existe
+        // Iniciar el canal si no hay ningún FFmpeg haciéndolo
         if (!canal) {
             canal = await iniciarCanal(idCanal);
+        } else {
+            // ¡CLAVE! Si ya existe, actualizamos su actividad porque alguien lo está viendo
+            canal.ultimaActividad = Date.now();
         }
 
-        // cancelar apagado si vuelve alguien
-        if (canal.timeout) {
-            clearTimeout(canal.timeout);
-            canal.timeout = null;
-        }
-
-        // añadir usuario
-        canal.usuarios.add(userId);
-
-        log(`👤 Usuario dentro ${idCanal} | total: ${canal.usuarios.size}`);
-
-        // detectar desconexión
-        req.on('close', () => {
-            usuarioSaleDelCanal(idCanal, userId);
-        });
-
-        const file = path.join(
-            RAM_DISK,
-            idCanal,
-            'index.m3u8'
-        );
+        const file = path.join(RAM_DISK, idCanal, 'index.m3u8');
 
         if (fs.existsSync(file)) {
             return res.sendFile(file);
         }
 
-        return res
-            .status(503)
-            .send("Conectando con la fuente...");
+        return res.status(503).send("Conectando con la fuente de video...");
 
     } catch (err) {
-
-        console.log(err);
-
-        return res
-            .status(500)
-            .send(err.message);
+        console.log(`[ERROR ${idCanal}]`, err.message);
+        return res.status(500).send(err.message);
     }
 });
 
-// servir segmentos ts
+// Servir segmentos .ts
 app.get('/:canal/:segmento.ts', (req, res) => {
+    const idCanal = req.params.canal;
+    const canal = canalesActivos.get(idCanal);
 
-    const file = path.join(
-        RAM_DISK,
-        req.params.canal,
-        `${req.params.segmento}.ts`
-    );
+    // ¡CLAVE! Mientras el reproductor siga pidiendo trozos de video (.ts), 
+    // mantenemos el canal vivo actualizando el timestamp.
+    if (canal) {
+        canal.ultimaActividad = Date.now();
+    }
+
+    const file = path.join(RAM_DISK, idCanal, `${req.params.segmento}.ts`);
 
     if (fs.existsSync(file)) {
         return res.sendFile(file);
@@ -295,13 +216,13 @@ app.get('/:canal/:segmento.ts', (req, res) => {
     return res.status(404).end();
 });
 
+// -------------------------------------------------------------
+// INICIO DEL SERVIDOR
+// -------------------------------------------------------------
+
 app.listen(PORT, () => {
-
-    console.log(`\n✅ Servidor iniciado puerto ${PORT}`);
-
-    console.log(`📡 Máximo ${MAX_CANALES} canales simultáneos`);
-
-    console.log(`⌛ Auto cierre por inactividad: 30s`);
-
-    console.log(`👥 Si 2 usuarios ven el mismo canal -> 1 solo FFmpeg`);
+    console.log(`\n✅ Servidor HLS iniciado en el puerto ${PORT}`);
+    console.log(`📡 Canales simultáneos permitidos: ILIMITADOS`);
+    console.log(`⌛ Auto-cierre inteligente por inactividad: 30s`);
+    console.log(`👥 Multiusuario: Si varias personas ven el mismo canal -> 1 solo FFmpeg\n`);
 });
