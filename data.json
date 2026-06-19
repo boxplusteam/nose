@@ -9,12 +9,12 @@
     "nombre": "Dazn Mundial 2",
     "url": "http://127.0.0.1:6878/ace/getstream?id=1b6ff4ead1ce4ae797dcb889dbd1fd5f5536128a"
   },
-  "DAZN MUNDIAL 3": {
-    "nombre": "Stream 3",
+  "daznm3": {
+    "nombre": "DAZN MUNDIAL 3",
     "url": "http://127.0.0.1:6878/ace/getstream?id=72abfc79fb0732a2bd98af649e9822d00343fecf"
   },
-  "DAZN MUNDIAL 4": {
-    "nombre": "Stream 4",
+  "daznm4": {
+    "nombre": "DAZN MUNDIAL 4",
     "url": "http://127.0.0.1:6878/ace/getstream?id=469564b10f5f5aba378c3e71bfd91bcd05f052b7"
   },
   
