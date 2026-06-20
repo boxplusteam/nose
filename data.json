@@ -24,7 +24,7 @@
   },
   "motogp": {
     "nombre": "MotoGP",
-    "url": "http://127.0.0.1:6878/ace/getstream?id=11cbb5346d28af0b972e646832f4be23dd39502d"
+    "url": "http://127.0.0.1:6878/ace/getstream?id=129c707eb4854171d178a566f36d90b7f2b5e624&pid=11249"
   },
   "motogp_op2": {
     "nombre": "MotoGP Op 2",
